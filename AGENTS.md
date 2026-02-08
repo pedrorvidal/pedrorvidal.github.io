@@ -1,0 +1,226 @@
+# Repository Guidelines
+
+## Project Structure & Module Organization
+This is a Vite + React + TypeScript project with Tailwind CSS and shadcn/ui components.
+
+- `src/main.tsx` boots the app, `src/App.tsx` is the root component.
+- `src/pages/` contains route-level views (e.g., `Index.tsx`, `NotFound.tsx`).
+- `src/components/` holds shared UI and feature components. Base UI primitives live under `src/components/ui/`.
+- `src/hooks/` contains reusable hooks (e.g., `use-mobile.tsx`, `use-toast.ts`).
+- `src/data/` stores local data modules.
+- `src/lib/` contains utilities (e.g., `utils.ts`).
+- Tests live in `src/test/`, with setup in `src/test/setup.ts`.
+- Static assets are in `public/`.
+
+## Build, Test, and Development Commands
+Use the npm scripts defined in `package.json`:
+
+- `npm run dev`: start the local dev server with Vite.
+- `npm run build`: create a production build.
+- `npm run build:dev`: create a development-mode build.
+- `npm run preview`: serve the production build locally.
+- `npm run lint`: run ESLint on the codebase.
+- `npm run test`: run Vitest in CI mode.
+- `npm run test:watch`: run Vitest in watch mode.
+
+## Coding Style & Naming Conventions
+- TypeScript + React with JSX in `.tsx` files.
+- Indentation: follow existing formatting in the touched file; no formatter is configured.
+- Components are PascalCase (e.g., `Header.tsx`, `CaseModal.tsx`).
+- Hooks are `use-` prefixed and camelCase (e.g., `useInView.ts`, `use-mobile.tsx`).
+- Utilities are lower camel or kebab as currently used (e.g., `utils.ts`).
+- ESLint rules live in `eslint.config.js`; run `npm run lint` before pushing.
+
+## Testing Guidelines
+- Test runner: Vitest with `jsdom` environment.
+- Test files match `src/**/*.{test,spec}.{ts,tsx}`.
+- Place common setup in `src/test/setup.ts`.
+- Prefer descriptive test names: `ComponentName.test.tsx` or `feature.spec.ts`.
+
+## Commit & Pull Request Guidelines
+- Commit conventions are not defined in this repository (no Git history available here). Use clear, imperative messages like `Add hero section animations`.
+- PRs should include:
+  - A concise summary of changes and reasoning.
+  - Steps to test locally (commands or manual steps).
+  - Screenshots or short clips for UI changes.
+
+## Configuration Notes
+- Module alias: `@` maps to `src` (see `vitest.config.ts` and Vite config).
+- Tailwind config lives in `tailwind.config.ts`.
+
+Portfolio Project – Agent Notes
+Context
+
+This project is my first personal React project, created with the goal of building a simple, professional, and easily maintainable personal portfolio, without unnecessary complexity or deployment friction.
+
+The main focus is:
+
+Learning React fundamentals in a real project
+
+Keeping the stack minimal and beginner-friendly
+
+Ensuring easy deployment to GitHub Pages
+
+Having a solid base to iterate and improve over time
+
+Technical Decisions
+Stack Choice
+
+React + Vite
+
+Chosen for fast setup, simple configuration, and modern defaults
+
+Tailwind CSS
+
+Utility-first styling for speed, consistency, and easy animations
+
+Single Page Application (SPA) – no routing
+
+No React Router
+
+Navigation via anchor links and scroll
+
+Avoids GitHub Pages routing issues (404 on refresh)
+
+This approach minimizes configuration overhead and removes common deployment pitfalls for first-time React projects.
+
+Design & UX Principles
+
+Dark theme by default
+
+Clean, modern, “tech-oriented” aesthetic
+
+Fully responsive (mobile-first)
+
+Subtle animations using Tailwind utilities:
+
+Hover effects (scale, shadow, lift)
+
+Entrance animations on scroll (fade / translate)
+
+Focus on readability, contrast, and visual hierarchy
+
+Content Structure
+Header / Hero
+
+Profile image (placeholder for now: avatar / caricature / photo)
+
+Name and role (placeholders)
+
+Short background / education summary (2–4 lines)
+
+Primary CTAs:
+
+View Cases (scroll)
+
+Contact (scroll)
+
+Optional CV download (placeholder)
+
+Portfolio Cases
+
+Data-driven from a local file (src/data/cases.ts)
+
+Each case includes:
+
+Cover image (required)
+
+Title and summary
+
+Stack and tags
+
+Highlights and metrics (when applicable)
+
+Optional links (GitHub, demo, article)
+
+Cases displayed as cards in a responsive grid
+
+Clicking a case opens a modal with full details (no routing)
+
+Additional Sections
+
+About (short bio + experience timeline)
+
+Skills / Stack (grouped badges)
+
+Contact (form + social links)
+
+Footer
+
+Data Management
+
+Portfolio content is not hardcoded in components
+
+All cases are stored in a structured local data file:
+
+Easy to add, remove, or update projects
+
+Acts as a simple “developer CMS”
+
+Development Workflow
+1. Layout & Code Generation
+
+Initial layout and structure generated using Lovable (free version)
+
+Lovable used strictly as a code generator, not as a hosting or runtime environment
+
+Requested full project output as a file tree with complete file contents
+
+2. Local Project Setup
+
+Local Vite + React project created
+
+All files generated by Lovable were copied and overwritten manually
+
+No files were auto-generated locally beyond the initial Vite setup
+
+3. Dependency Installation
+
+Dependencies installed directly from the package.json provided by Lovable:
+
+npm install
+
+4. Local Development
+
+Project executed locally using:
+
+npm run dev
+
+
+Validation step before any refactoring or optimization
+
+5. Post-Generation Improvements
+
+After the project runs successfully, the codebase is refined using Codex CLI:
+
+Cleanup and refactoring
+
+Component organization
+
+Animation improvements
+
+Accessibility adjustments
+
+GitHub Pages deployment preparation
+
+Deployment Strategy
+
+Target platform: GitHub Pages
+
+Static build via Vite
+
+SPA without routing eliminates the need for 404 redirects
+
+Vite base configuration adjusted depending on repository name
+
+Guiding Principles
+
+Make it work first
+
+Improve incrementally
+
+Avoid overengineering
+
+Favor clarity over cleverness
+
+Treat this project as both a portfolio and a learning artifact
