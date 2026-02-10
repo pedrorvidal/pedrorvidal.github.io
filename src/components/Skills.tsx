@@ -16,21 +16,24 @@ const skillGroups = [
   {
     category: 'Backend',
     skills: [
-      'Node.js',
-      'Express',
+      'PHP',
+      'WordPress',
+      'Laravel',
+      'Codeigniter',
+      'Drupal',
+      'MySQL/MariaDB',
       'PostgreSQL',
-      'MongoDB',
       'REST APIs',
       'GraphQL',
     ],
   },
   {
     category: 'Tools & DevOps',
-    skills: ['Git', 'Docker', 'CI/CD', 'Vercel', 'AWS', 'Figma'],
+    skills: ['Git', 'Docker', 'CI/CD', 'Vercel', 'Figma', 'Linux'],
   },
   {
     category: 'Soft Skills',
-    skills: ['Communication', 'Problem Solving', 'Agile/Scrum', 'Mentoring'],
+    skills: ['Communication', 'Problem Solving', 'Agile/Scrum'],
   },
 ];
 
