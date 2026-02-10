@@ -8,9 +8,11 @@ import { useInView } from '@/hooks/useInView';
 import { useToast } from '@/hooks/use-toast';
 
 const socials = [
-  { icon: Github, label: 'GitHub', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
-  { icon: Twitter, label: 'Twitter', href: '#' },
+  {
+    icon: Linkedin,
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/pedrorvidal/?locale=en',
+  },
 ];
 
 export default function Contact() {
