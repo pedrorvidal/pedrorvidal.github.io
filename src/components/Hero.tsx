@@ -48,11 +48,11 @@ export default function Hero() {
               <Button asChild variant="outline" size="lg" className="gap-2">
                 <a href="#contact">Contact Me</a>
               </Button>
-              <Button asChild variant="ghost" size="lg" className="gap-2">
-                <a href="#" download>
-                  <Download size={16} /> Download CV
-                </a>
-              </Button>
+              {/* <Button asChild variant="ghost" size="lg" className="gap-2"> */}
+              {/*   <a href="#" download> */}
+              {/*     <Download size={16} /> Download CV */}
+              {/*   </a> */}
+              {/* </Button> */}
             </div>
           </div>
         </div>
