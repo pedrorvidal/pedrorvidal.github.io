@@ -35,7 +35,7 @@ export default function Hero() {
 
             <p className="text-muted-foreground max-w-lg leading-relaxed">
               I build modern web applications with clean code and pixel-perfect
-              design. BSc in Computer Science, 5+ years of experience crafting
+              design. BSc in Computer Science, 15+ years of experience crafting
               products that people love to use.
             </p>
 

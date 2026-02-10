@@ -17,19 +17,50 @@ export default function Contact() {
   const { ref, inView } = useInView();
   const { toast } = useToast();
   const [sending, setSending] = useState(false);
+  const staticFormsApiKey = import.meta.env.VITE_STATICFORMS_API_KEY;
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!staticFormsApiKey) {
+      toast({
+        title: 'Missing form configuration',
+        description:
+          'Set VITE_STATICFORMS_API_KEY in your environment to enable submissions.',
+        duration: 30000,
+      });
+      return;
+    }
     setSending(true);
-    // Simulate send
-    setTimeout(() => {
-      setSending(false);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append('apiKey', staticFormsApiKey);
+    formData.append('subject', 'Portfolio Contact Form');
+
+    try {
+      const response = await fetch('https://api.staticforms.dev/submit', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error('Request failed');
+      }
+
       toast({
         title: 'Message sent!',
         description: "Thanks for reaching out. I'll get back to you soon.",
+        duration: 30000,
       });
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+      form.reset();
+    } catch (error) {
+      toast({
+        title: 'Message failed',
+        description: 'Something went wrong. Please try again in a moment.',
+        duration: 30000,
+      });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -52,15 +83,23 @@ export default function Contact() {
           }}
         >
           <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              aria-hidden="true"
+              className="hidden"
+              name="honeypot"
+              tabIndex={-1}
+              autoComplete="off"
+            />
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
-                <Input id="name" placeholder="Your name" required />
+                <Input id="name" name="name" placeholder="Your name" required />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="you@example.com"
                   required
@@ -71,6 +110,7 @@ export default function Contact() {
               <Label htmlFor="message">Message</Label>
               <Textarea
                 id="message"
+                name="message"
                 placeholder="Tell me about your project…"
                 rows={5}
                 required

@@ -42,7 +42,7 @@ export default function CaseModal({ caseData, open, onClose }: CaseModalProps) {
         />
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-1.5 mt-4">
           {caseData.tags.map((tag) => (
             <Badge key={tag} variant="secondary">
               {tag}
@@ -51,7 +51,7 @@ export default function CaseModal({ caseData, open, onClose }: CaseModalProps) {
         </div>
 
         {/* Problem & Solution */}
-        <div className="space-y-4 text-sm leading-relaxed">
+        <div className="space-y-4 text-sm leading-relaxed mt-4">
           <div>
             <h4 className="font-semibold text-base mb-1">The Problem</h4>
             <p className="text-muted-foreground">{caseData.problem}</p>
@@ -97,7 +97,7 @@ export default function CaseModal({ caseData, open, onClose }: CaseModalProps) {
 
         {/* Links */}
         {caseData.links && caseData.links.length > 0 && (
-          <div className="flex flex-wrap gap-2 pt-2">
+          <div className="flex flex-wrap gap-2 pt-4">
             {caseData.links.map((link) => (
               <Button
                 key={link.label}

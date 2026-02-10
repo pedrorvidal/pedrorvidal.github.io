@@ -9,6 +9,7 @@ import caseCuidadosSemLimitesCover from '@/assets/images/cases/case-cuidadosemli
 import caseTorrentCover from '@/assets/images/cases/case-torrent.png';
 import caseMedtronicDiabetesLatamCover from '@/assets/images/cases/case-medtronicdiabeteslatam.png';
 import caseAgenciaF2fCover from '@/assets/images/cases/case-agenciaf2f.png';
+import caseChegolaConsorcioCover from '@/assets/images/cases/case-chegolaconsorcio.png';
 
 export interface CaseLink {
   label: string;
@@ -54,7 +55,7 @@ export const cases: Case[] = [
     tags: ['E-Commerce', 'Redesign', 'Frontend', 'Backend', 'API Integration'],
     highlights: [],
     metrics: [],
-    links: [],
+    links: [{ label: 'Live Demo', url: 'https://alaresinternet.com.br' }],
   },
   {
     id: '2',
@@ -76,10 +77,7 @@ export const cases: Case[] = [
     tags: ['Portal', 'Redesign', 'Frontend', 'Backend', 'API Integration'],
     highlights: [],
     metrics: [],
-    links: [
-      { label: 'Live Demo', url: 'https://alaresinternet.com.br' },
-      { label: 'GitHub', url: '#' },
-    ],
+    links: [{ label: 'Live Demo', url: 'https://alaresinternet.com.br' }],
   },
   {
     id: '3',
@@ -91,14 +89,22 @@ export const cases: Case[] = [
     summary:
       'Marketing site refresh focused on treatment education, clear CTAs, and a consistent visual narrative across devices.',
     problem:
-      'Key treatment benefits and provider details were difficult to find on mobile and didn’t translate well across sections.',
+      'New features and treatments were not effectively highlighted, leading to lower engagement and conversion rates.',
     solution:
-      'Reworked information hierarchy, improved CTA placement, and optimized assets for faster page loads and clarity.',
-    stack: ['WordPress', 'jQuery', 'Bootstrap', 'Google Analytics', 'Apache'],
+      'Developed new features and bug fixes for improved user experience, optimized content layout, and enhanced mobile responsiveness.',
+    stack: [
+      'WordPress',
+      'Timber',
+      'Twig',
+      'jQuery',
+      'Bootstrap',
+      'Google Analytics',
+      'Apache',
+    ],
     tags: ['Marketing Site', 'Redesign', 'Frontend', 'CMS', 'SEO'],
     highlights: [],
     metrics: [],
-    links: [],
+    links: [{ label: 'Live Demo', url: 'https://ultherapy.com/' }],
   },
   {
     id: '4',
@@ -108,20 +114,19 @@ export const cases: Case[] = [
     role: 'Frontend Developer',
     coverImage: caseConfidenceToBeMeCover,
     summary:
-      'Campaign website designed to communicate a clear message and guide visitors to relevant resources and actions.',
-    problem:
-      'The previous experience lacked a focused narrative and struggled to convert visitors into meaningful actions.',
+      'Development of new features and bug fixes for a campaign site focused on user engagement and clear messaging.',
+    problem: 'Legacy website',
     solution:
       'Delivered a structured campaign layout with stronger messaging hierarchy, accessible sections, and analytics tracking.',
     stack: ['WordPress', 'Google Analytics', 'Apache'],
     tags: ['Campaign', 'Content', 'Frontend', 'CMS', 'Marketing'],
     highlights: [],
     metrics: [],
-    links: [],
+    links: [{ label: 'Live Demo', url: 'https://confidencetobeme.com/' }],
   },
   {
     id: '5',
-    title: 'Merz Aesthetics Brazil Website',
+    title: 'Merz Aesthetics Brazil, Argentina, Chile, Colombia and LATAM',
     clientOrProject: 'Merz Aesthetics',
     period: '2025',
     role: 'Frontend Developer',
@@ -129,14 +134,21 @@ export const cases: Case[] = [
     summary:
       'Localized corporate site with product education, brand consistency, and mobile-first navigation.',
     problem:
-      'Content was fragmented across pages and lacked consistent structure for the Brazilian audience.',
+      'Content was fragmented across pages and lacked consistent structure for the audience.',
     solution:
       'Unified content blocks, improved navigation patterns, and ensured responsive layouts across core templates.',
-    stack: ['WordPress', 'jQuery', 'Google Analytics', 'Apache'],
+    stack: [
+      'WordPress',
+      'Timber',
+      'Twig',
+      'jQuery',
+      'Google Analytics',
+      'Apache',
+    ],
     tags: ['Corporate', 'Localization', 'Frontend', 'CMS', 'Marketing'],
     highlights: [],
     metrics: [],
-    links: [],
+    links: [{ label: 'Live Demo', url: 'https://merzaesthetics.com.br/' }],
   },
   {
     id: '6',
@@ -146,16 +158,16 @@ export const cases: Case[] = [
     role: 'Frontend Developer',
     coverImage: caseTintaDeQualidadeCover,
     summary:
-      'Educational portal focused on paint quality, best practices, and clear navigation for different audiences.',
+      'Institutional portal focused on paint quality, best practices, and clear navigation for different audiences.',
     problem:
       'Users struggled to find practical guidance and relevant sections quickly on the legacy site.',
     solution:
       'Introduced a clearer content architecture with featured sections and responsive UI patterns.',
-    stack: ['WordPress', 'Bootstrap', 'Apache'],
+    stack: ['WordPress', 'Bootstrap', 'Apache', 'CornerStone Builder'],
     tags: ['Portal', 'Content', 'Frontend', 'CMS', 'Education'],
     highlights: [],
     metrics: [],
-    links: [],
+    links: [{ label: 'Live Demo', url: 'https://tintadequalidade.com.br/' }],
   },
   {
     id: '7',
@@ -170,11 +182,11 @@ export const cases: Case[] = [
       'Event and association content was difficult to discover and buried across inconsistent pages.',
     solution:
       'Reorganized navigation, standardized templates, and improved content discoverability across devices.',
-    stack: ['WordPress', 'Bootstrap', 'Apache'],
+    stack: ['WordPress', 'Bootstrap', 'Apache', 'CornerStone Builder'],
     tags: ['Institutional', 'Events', 'Frontend', 'CMS', 'Content'],
     highlights: [],
     metrics: [],
-    links: [],
+    links: [{ label: 'Live Demo', url: 'https://abrafati.com.br/' }],
   },
   {
     id: '8',
@@ -186,14 +198,20 @@ export const cases: Case[] = [
     summary:
       'Corporate website highlighting logistics solutions with clean visual hierarchy and strong calls to action.',
     problem:
-      'Previous pages lacked clear focus on service offerings and had inconsistent section spacing.',
+      'Previous website used an old and discontinued php framework, leading to performance and maintenance issues.',
     solution:
       'Built a consistent component system and improved content hierarchy to emphasize key offerings.',
-    stack: ['WordPress', 'jQuery', 'Bootstrap', 'Google Analytics', 'Cloudflare'],
+    stack: [
+      'WordPress',
+      'jQuery',
+      'Bootstrap',
+      'Google Analytics',
+      'Cloudflare',
+    ],
     tags: ['Corporate', 'Marketing', 'Frontend', 'CMS', 'Performance'],
     highlights: [],
     metrics: [],
-    links: [],
+    links: [{ label: 'Live Demo', url: 'https://glp.com.br/' }],
   },
   {
     id: '9',
@@ -212,7 +230,7 @@ export const cases: Case[] = [
     tags: ['Campaign', 'Awareness', 'Frontend', 'CMS', 'Accessibility'],
     highlights: [],
     metrics: [],
-    links: [],
+    links: [{ label: 'Live Demo', url: 'https://cuidadosemlimites.com.br/' }],
   },
   {
     id: '10',
@@ -224,14 +242,22 @@ export const cases: Case[] = [
     summary:
       'Institutional site focused on clear communication of services and a responsive layout.',
     problem:
-      'Users faced friction navigating service information and company details on smaller screens.',
+      'Legacy website, needed new features and bug fixes for improved user experience and mobile responsiveness.',
     solution:
-      'Simplified navigation and improved layout consistency to support quick scanning and discovery.',
+      'Developed new features for product search and added new filters, optimized content layout, and enhanced mobile responsiveness.',
     stack: ['Google Analytics', 'Nginx'],
-    tags: ['Institutional', 'Responsive', 'Frontend', 'Performance'],
+    tags: [
+      'Institutional',
+      'Responsive',
+      'Frontend',
+      'Performance',
+      'Backend',
+      'Laravel',
+      'CoasterCMS',
+    ],
     highlights: [],
     metrics: [],
-    links: [],
+    links: [{ label: 'Live Demo', url: 'https://www.torrent.com.br/' }],
   },
   {
     id: '11',
@@ -246,11 +272,11 @@ export const cases: Case[] = [
       'Information was dense and not prioritized for quick access by patients and caregivers.',
     solution:
       'Redesigned content flow with prominent resources and improved mobile readability.',
-    stack: ['WordPress', 'jQuery', 'Google Analytics', 'Nginx'],
+    stack: ['WordPress', 'jQuery', 'Google Analytics', 'Nginx', 'Bootstrap'],
     tags: ['Healthcare', 'Education', 'Frontend', 'CMS', 'Content'],
     highlights: [],
     metrics: [],
-    links: [],
+    links: [{ label: 'Live Demo', url: 'https://medtronicdiabeteslatam.com/' }],
   },
   {
     id: '12',
@@ -261,14 +287,32 @@ export const cases: Case[] = [
     coverImage: caseAgenciaF2fCover,
     summary:
       'Agency website showcasing services, work highlights, and a conversion-focused contact flow.',
-    problem:
-      'Service messaging was scattered and the contact funnel lacked clarity.',
+    problem: 'New site redesign.',
     solution:
       'Rebuilt page structure with focused service sections, improved CTAs, and cleaner typography.',
     stack: ['WordPress', 'jQuery', 'Bootstrap', 'Google Analytics'],
     tags: ['Agency', 'Portfolio', 'Frontend', 'CMS', 'Marketing'],
     highlights: [],
     metrics: [],
-    links: [],
+    links: [{ label: 'Live Demo', url: 'https://agenciaf2f.com/' }],
+  },
+  {
+    id: '13',
+    title: 'Chego La Consorcio Website',
+    clientOrProject: 'Chego La Consorcio',
+    period: '2025',
+    role: 'Frontend Developer',
+    coverImage: caseChegolaConsorcioCover,
+    summary:
+      'Institutional website refresh with a clear services overview, strong CTAs, and a mobile-friendly layout.',
+    problem:
+      'Site redesign with new features and bug fixes for improved user experience and mobile responsiveness.',
+    solution:
+      'Reorganized content blocks, improved visual hierarchy, and ensured responsive layouts across core sections.',
+    stack: ['WordPress', 'jQuery', 'Google Analytics', 'Cloudflare'],
+    tags: ['Institutional', 'Frontend', 'CMS', 'Marketing'],
+    highlights: [],
+    metrics: [],
+    links: [{ label: 'Live Demo', url: 'https://chegolaconsorcio.com.br/' }],
   },
 ];
