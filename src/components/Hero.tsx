@@ -1,7 +1,9 @@
-import { ArrowDown, Download } from 'lucide-react';
+import { ArrowDown, Download, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import ImgAvatar from '@/assets/images/vidal-lisan-al-gaib.png';
+
+const resumeFile = `${import.meta.env.BASE_URL}Pedro-Vidal-Resume.pdf`;
 
 export default function Hero() {
   return (
@@ -29,14 +31,23 @@ export default function Hero() {
                 <span className="text-gradient">Pedro Vidal</span>
               </h1>
               <p className="text-xl md:text-2xl font-medium text-muted-foreground mt-2">
-                Full-Stack Developer
+                Full-Stack PHP Developer
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground/80 mt-1">
+                WordPress &amp; Laravel Specialist · 20+ Years of Experience
               </p>
             </div>
 
             <p className="text-muted-foreground max-w-lg leading-relaxed">
-              I build modern web applications with clean code and pixel-perfect
-              design. BSc in Computer Science, 15+ years of experience crafting
-              products that people love to use.
+              I build and rescue web platforms for international brands —
+              diagnosing performance/SEO issues, responding to security
+              incidents, and standardizing maintenance at scale. Proven track
+              record leading multi-country projects for clients like Merz
+              Aesthetics, Medtronic, and Torrent Pharma.
+            </p>
+
+            <p className="flex items-center justify-center md:justify-start gap-1.5 text-sm text-muted-foreground/80">
+              <MapPin size={14} /> Porto Alegre, RS, Brazil
             </p>
 
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
@@ -48,11 +59,11 @@ export default function Hero() {
               <Button asChild variant="outline" size="lg" className="gap-2">
                 <a href="#contact">Contact Me</a>
               </Button>
-              {/* <Button asChild variant="ghost" size="lg" className="gap-2"> */}
-              {/*   <a href="#" download> */}
-              {/*     <Download size={16} /> Download CV */}
-              {/*   </a> */}
-              {/* </Button> */}
+              <Button asChild variant="ghost" size="lg" className="gap-2">
+                <a href={resumeFile} download="Pedro-Vidal-Resume.pdf">
+                  <Download size={16} /> Download CV
+                </a>
+              </Button>
             </div>
           </div>
         </div>

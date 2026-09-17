@@ -62,6 +62,23 @@ export default function CaseModal({ caseData, open, onClose }: CaseModalProps) {
           </div>
         </div>
 
+        {/* Metrics */}
+        {caseData.metrics && caseData.metrics.length > 0 && (
+          <div>
+            <h4 className="font-semibold text-base mb-2">Key Results</h4>
+            <div className="flex flex-wrap gap-2">
+              {caseData.metrics.map((m, i) => (
+                <span
+                  key={i}
+                  className="text-xs font-medium px-2.5 py-1.5 rounded-md bg-primary/10 text-primary border border-primary/20"
+                >
+                  {m}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Highlights */}
         {caseData.highlights.length > 0 && (
           <div>

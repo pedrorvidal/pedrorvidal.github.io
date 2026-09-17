@@ -3,37 +3,60 @@ import { useInView } from '@/hooks/useInView';
 
 const skillGroups = [
   {
-    category: 'Frontend',
-    skills: [
-      'React',
-      'TypeScript',
-      'Next.js',
-      'Tailwind CSS',
-      'HTML/CSS',
-      'Vite',
-    ],
-  },
-  {
-    category: 'Backend',
+    category: 'Languages & Frameworks',
     skills: [
       'PHP',
       'WordPress',
       'Laravel',
-      'Codeigniter',
-      'Drupal',
-      'MySQL/MariaDB',
-      'PostgreSQL',
-      'REST APIs',
-      'GraphQL',
+      'CodeIgniter',
+      'Symfony',
+      'Silex',
+      'Doctrine',
+      'JavaScript',
+      'TypeScript',
+      'HTML/CSS',
     ],
   },
   {
-    category: 'Tools & DevOps',
-    skills: ['Git', 'Docker', 'CI/CD', 'Vercel', 'Figma', 'Linux'],
+    category: 'Frontend',
+    skills: ['React', 'Next.js', 'Tailwind CSS', 'Vite', 'GraphQL'],
   },
   {
-    category: 'Soft Skills',
-    skills: ['Communication', 'Problem Solving', 'Agile/Scrum'],
+    category: 'Data & Infrastructure',
+    skills: [
+      'MySQL/MariaDB',
+      'PostgreSQL',
+      'SQL Server',
+      'Docker',
+      'REST APIs',
+      'Git/GitHub/GitLab/Bitbucket',
+    ],
+  },
+  {
+    category: 'CI/CD & Tools',
+    skills: [
+      'GitHub Actions',
+      'Bitbucket Pipelines',
+      'Jenkins',
+      'Vercel',
+      'Figma',
+      'Linux',
+      'Drupal',
+    ],
+  },
+  {
+    category: 'AI & Automation',
+    skills: [
+      'Claude Code',
+      'MCP',
+      'Playwright',
+      'Workflow Orchestration',
+      'QA Automation',
+    ],
+  },
+  {
+    category: 'Methodologies & Soft Skills',
+    skills: ['Scrum', 'Kanban', 'Communication', 'Problem Solving'],
   },
 ];
 
@@ -48,7 +71,7 @@ export default function Skills() {
           <h2 className="text-3xl md:text-4xl font-bold">Skills & Stack</h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {skillGroups.map((group, gi) => (
             <div
               key={group.category}
