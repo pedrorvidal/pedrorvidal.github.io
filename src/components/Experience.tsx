@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 
 interface ExperienceEntry {
@@ -7,6 +8,7 @@ interface ExperienceEntry {
   context?: string;
   description?: string;
   achievements?: string[];
+  linkToCases?: boolean;
 }
 
 const experience: ExperienceEntry[] = [
@@ -17,14 +19,9 @@ const experience: ExperienceEntry[] = [
     context:
       'Development and maintenance lead across multiple simultaneous projects, including sole technical point of reference for the entire Merz Pharma network (Ultherapy, Confidence to Be Me, Merz Aesthetics) — multi-country sites in Argentina, Brazil, Colombia, and Mexico, integrated with Salesforce, Salesforce Marketing Cloud, and Crisalix — in addition to Medtronic, GLP, Alares, DiversiHub, Abrafati, Tinta de Qualidade, and Torrent Pharma.',
     achievements: [
-      "Led the migration and performance/SEO turnaround of GLP's ~900-page investor-facing corporate site: found the root cause of ~390 broken links, cut mobile render-blocking time by 70–75%, and removed ~900 orphan pages.",
-      'Responded to a security incident (possible malware) across a 5-site Ultherapy network, then standardized an AI-assisted WordPress core/Composer update routine across 10 repositories — cutting the update cycle from 1 week to 1 day.',
-      "Built Alares' first e-commerce store, integrating every purchase attempt with RD Station as a lead — including sales lost to regional signal coverage — expanding the client's digital sales channel.",
-      'Implemented 5 continuous integrations between multi-country landing pages and RD Station for Medtronic, normalizing divergent form fields across countries into a single CRM record and reaching 100% error-free lead capture.',
-      'Fixed conversion-event failures distorting campaign data across a 5-site Merz Aesthetics network, restoring reliable analytics (Google Tag Manager/DataLayer) for the marketing team.',
-      'Restored critical clinic-search functionality on the Confidence to Be Me platform by replacing a fragile in-house integration with the Google Places API + ViaCEP.',
       'Sped up delivery across multi-site WordPress/Bedrock codebases with AI-assisted development workflows (Claude Code) — technical planning, standardized execution, and diagnostic runbooks verified via WP-CLI and MySQL.',
     ],
+    linkToCases: true,
   },
   {
     company: 'DEXA',
@@ -80,8 +77,8 @@ export default function Experience() {
           <p className="text-sm font-mono text-primary mb-2">Career</p>
           <h2 className="text-3xl md:text-4xl font-bold">Experience</h2>
           <p className="text-muted-foreground mt-3 max-w-md mx-auto">
-            20+ years shipping and rescuing web platforms — from freelance
-            projects to multi-country enterprise programs.
+            20+ years of companies and roles behind the work — see the Cases
+            section below for the detailed, quantified results.
           </p>
         </div>
 
@@ -129,6 +126,15 @@ export default function Experience() {
                     </li>
                   ))}
                 </ul>
+              )}
+
+              {job.linkToCases && (
+                <a
+                  href="#cases"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline mt-3"
+                >
+                  See detailed case studies <ArrowRight size={14} />
+                </a>
               )}
             </div>
           ))}
