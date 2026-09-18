@@ -39,11 +39,11 @@ export default function Hero() {
             </div>
 
             <p className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-              I build and rescue web platforms for international brands —
-              diagnosing performance/SEO issues, responding to security
-              incidents, and standardizing maintenance at scale. Proven track
-              record leading multi-country projects for clients like Merz
-              Aesthetics, Medtronic, and Torrent Pharma.
+              I build and maintain systems and APIs for companies around the
+              world — diagnosing performance/SEO issues, responding to
+              security incidents, and standardizing maintenance at scale
+              using WordPress, Laravel, PHP, React, and related tools across
+              multi-country projects.
             </p>
 
             <p className="flex items-center justify-center md:justify-start gap-1.5 text-base text-muted-foreground/80">
