@@ -10,6 +10,8 @@ import caseTorrentCover from '@/assets/images/cases/case-torrent.png';
 import caseMedtronicDiabetesLatamCover from '@/assets/images/cases/case-medtronicdiabeteslatam.png';
 import caseAgenciaF2fCover from '@/assets/images/cases/case-agenciaf2f.png';
 import caseChegolaConsorcioCover from '@/assets/images/cases/case-chegolaconsorcio.png';
+import caseBpTrackerCover from '@/assets/images/cases/case-bp-tracker.png';
+import casePvBlocksSuiteCover from '@/assets/images/cases/case-pv-blocks-suite.png';
 
 export interface CaseLink {
   label: string;
@@ -35,6 +37,99 @@ export interface Case {
 }
 
 export const cases: Case[] = [
+  {
+    id: '14',
+    title: 'BP Tracker — Headless WordPress + React',
+    clientOrProject: 'Personal Project',
+    period: 'Sep 2026',
+    role: 'Fullstack Developer',
+    coverImage: caseBpTrackerCover,
+    summary:
+      'Blood pressure tracking app with a headless WordPress backend (custom REST API + JWT auth) and a mobile-first React + TypeScript frontend with trend charts.',
+    problem:
+      'Logging blood pressure twice a day is only useful if the history is easy to read — and health data demands real authentication, strict per-user data isolation, and protection against abuse, none of which WordPress offers out of the box for a decoupled SPA.',
+    solution:
+      "Built a WordPress plugin that exposes a versioned REST API (bp-tracker/v1) over a custom post type with its own capabilities, secured by HS256 JWT access tokens kept in memory and rotating refresh tokens in an HttpOnly, SameSite=Strict cookie — with reuse detection that revokes the whole session, per-IP and per-account rate limiting, an exact-origin CORS policy, and an admin approval flow for new sign-ups. On top of it, a Vite + React 19 + TypeScript SPA (TanStack Query, Tailwind CSS v4, Recharts) with a fast, validated entry form and a history dashboard: period presets and custom ranges, averages compared against the previous period, ACC/AHA category distribution, a zoomable systolic/diastolic chart with auto-aggregation, and dark mode.",
+    stack: [
+      'WordPress',
+      'PHP',
+      'REST API',
+      'JWT',
+      'React',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'TanStack Query',
+      'Recharts',
+      'PHPUnit',
+      'Vitest',
+      'GitHub Actions',
+      'Docker',
+    ],
+    tags: ['Headless CMS', 'Fullstack', 'Security', 'Data Visualization', 'CI/CD'],
+    highlights: [
+      'Custom REST API with JWT access tokens and rotating, reuse-detecting refresh tokens',
+      'Rate limiting, strict CORS, CSRF header and role-based approval flow for sign-ups',
+      'Mobile-first dashboard with period comparison, BP categories and a zoomable trend chart',
+      'Accessible forms (aria-describedby, focus management, live status) and full dark mode',
+      'CI with lint, PHPStan level 6, type-check, tests, dependency audit and Dependabot',
+    ],
+    metrics: [
+      '320+ automated tests (PHPUnit + Vitest)',
+      'PHPStan level 6 · strict TypeScript',
+      'Zero-warning ESLint gate in CI',
+    ],
+    links: [
+      { label: 'GitHub', url: 'https://github.com/pedrorvidal/bp-tracker' },
+    ],
+  },
+  {
+    id: '15',
+    title: 'PV Blocks Suite — Native Gutenberg Blocks',
+    clientOrProject: 'Personal Project',
+    period: 'Sep 2026',
+    role: 'WordPress Plugin Developer',
+    coverImage: casePvBlocksSuiteCover,
+    summary:
+      'A WordPress plugin bundling 12 production-ready, fully native Gutenberg blocks — server-rendered, accessible, translatable and covered by PHP and JS tests.',
+    problem:
+      'Client sites often rely on heavy page builders or a patchwork of third-party block plugins to get common sections like CTAs, accordions, tabs or pricing tables — adding bloat, inconsistent markup, accessibility gaps and dependency risk.',
+    solution:
+      'Built a single lightweight plugin on WordPress’ native block-editor APIs only: every block is a dynamic block rendered in strictly-typed PHP 8.2, with a React + TypeScript editor UI and auto-registration from block.json. Blocks include Container, CTA, Accordion, Tabs, Pricing Table, Card Grid, Alert Box, Timeline, Before/After, Testimonials, Stats Counter and Team — using semantic HTML, WAI-ARIA patterns, reduced-motion support and the Interactivity API for front-end behavior that degrades gracefully without JavaScript. Shipped as v1.0.0 with a pt_BR translation and a pre-built release zip.',
+    stack: [
+      'WordPress',
+      'Gutenberg',
+      'PHP',
+      'React',
+      'TypeScript',
+      'SCSS',
+      'Interactivity API',
+      'PHPUnit',
+      'Jest',
+      'PHPStan',
+      'Docker',
+    ],
+    tags: ['WordPress Plugin', 'Gutenberg', 'Blocks', 'Accessibility', 'i18n', 'Testing'],
+    highlights: [
+      '12 native blocks (20 incl. child blocks), no page-builder dependencies',
+      'Server-side rendering in strictly-typed PHP 8.2 with block.json auto-discovery',
+      'Accessible by design: native <details>, ARIA tabs and slider, semantic markup, contrast warnings',
+      'Interactive blocks built on the WordPress Interactivity API with no-JS fallbacks',
+      'Quality gate: PHPStan, WPCS, PHPUnit (wp-env), Jest + Testing Library and TypeScript checks',
+    ],
+    metrics: [
+      '~300 automated tests (PHPUnit + Jest)',
+      'Every block has render and editor tests',
+      'English + pt_BR out of the box',
+    ],
+    links: [
+      { label: 'GitHub', url: 'https://github.com/pedrorvidal/pv-blocks-suite' },
+      {
+        label: 'Release v1.0.0',
+        url: 'https://github.com/pedrorvidal/pv-blocks-suite/releases/latest',
+      },
+    ],
+  },
   {
     id: '1',
     title: 'E-Commerce Alares internet',
