@@ -1,5 +1,5 @@
 import { useRef, useState, type PointerEvent } from 'react';
-import { ArrowDown, Download, MapPin } from 'lucide-react';
+import { ArrowDown, Download, MapPin, Play } from 'lucide-react';
 import KonamiKeys from './KonamiKeys';
 import ImgAvatar from '@/assets/images/vidal-pixel-art.webp';
 import ImgAvatarCheat from '@/assets/images/vidal-final-boss.webp';
@@ -50,8 +50,9 @@ export default function Hero() {
       <div className="container py-12 md:py-16">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left animate-fade-up">
-            <p className="inline-block px-3 py-1.5 font-arcade text-[0.625rem] uppercase rounded-full border border-neon-magenta bg-neon-magenta/10 text-neon-magenta">
-              <span className="motion-safe:animate-blink">▶</span> {t.hero.badge}
+            <p className="inline-flex items-center gap-2 px-3 py-1.5 font-arcade text-[0.625rem] leading-none uppercase rounded-full border border-neon-magenta bg-neon-magenta/10 text-neon-magenta">
+              <Play size={8} fill="currentColor" aria-hidden="true" className="motion-safe:animate-blink" />
+              {t.hero.badge}
             </p>
 
             <h1 className="space-y-4">
