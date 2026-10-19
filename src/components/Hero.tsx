@@ -2,7 +2,7 @@ import { useRef, useState, type PointerEvent } from 'react';
 import { ArrowDown, Download, MapPin } from 'lucide-react';
 import KonamiKeys from './KonamiKeys';
 import ImgAvatar from '@/assets/images/vidal-pixel-art.webp';
-import ImgAvatarCheat from '@/assets/images/vidal-lisan-al-gaib.webp';
+import ImgAvatarCheat from '@/assets/images/vidal-final-boss.webp';
 import { useLanguage } from '@/i18n/useLanguage';
 import { useCheat } from '@/cheat/context';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
