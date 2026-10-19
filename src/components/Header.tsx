@@ -12,7 +12,8 @@ export default function Header() {
   const { score, hi } = useScrollScore();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [dark, setDark] = useState(true);
+  // index.html applies the saved theme before first paint; start from it.
+  const [dark, setDark] = useState(() => !document.documentElement.classList.contains('light'));
 
   const navLinks = [
     { label: t.nav.about, href: '#about' },
@@ -24,6 +25,11 @@ export default function Header() {
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark);
     document.documentElement.classList.toggle('light', !dark);
+    try {
+      localStorage.setItem('pv-theme', dark ? 'dark' : 'light');
+    } catch {
+      // Ignore: the choice just won't persist.
+    }
   }, [dark]);
 
   useEffect(() => {

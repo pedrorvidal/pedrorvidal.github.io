@@ -41,7 +41,7 @@ export default function CaseGrid() {
   const count = (key: Filter) => available.filter((c) => key === 'all' || c.kind === key).length;
 
   return (
-    <section id="cases" aria-labelledby="cases-title" className="py-24">
+    <section id="cases" aria-labelledby="cases-title" className="py-24 md:py-32">
       <div className="container" ref={ref}>
         <SectionHeading id="cases-title" kicker={t.cases.kicker} title={t.cases.title} subtitle={t.cases.subtitle} />
 

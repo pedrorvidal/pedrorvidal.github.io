@@ -65,7 +65,16 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="font-arcade text-[0.625rem] sm:text-xs text-neon-yellow">{t.hero.specialty}</p>
+            <ul className="flex flex-wrap justify-center lg:justify-start gap-2">
+              {t.hero.specialty.split(' · ').map((item) => (
+                <li
+                  key={item}
+                  className="rounded border border-neon-yellow/50 bg-neon-yellow/10 px-2.5 py-1.5 font-arcade text-[0.625rem] text-neon-yellow"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
 
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               {t.hero.intro}

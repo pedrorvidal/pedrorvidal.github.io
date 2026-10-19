@@ -54,7 +54,7 @@ export default function Skills() {
   const { lang, t } = useLanguage();
 
   return (
-    <section id="skills" aria-labelledby="skills-title" className="py-24">
+    <section id="skills" aria-labelledby="skills-title" className="py-24 md:py-32">
       <div className="container" ref={ref}>
         <SectionHeading
           id="skills-title"
@@ -72,7 +72,7 @@ export default function Skills() {
                 key={group.category.en}
                 data-inview={inView}
                 style={{ transitionDelay: `${gi * 0.08}s` }}
-                className={`reveal group rounded-xl border-2 border-border bg-card p-5 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 ${c.border} ${c.glow}`}
+                className={`reveal group pixel-card border-2 border-border p-5 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 ${c.border} ${c.glow}`}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span

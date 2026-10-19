@@ -7,7 +7,7 @@ export default function About() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" aria-labelledby="about-title" className="py-24">
+    <section id="about" aria-labelledby="about-title" className="py-24 md:py-32">
       <div className="container" ref={ref}>
         <SectionHeading id="about-title" kicker={t.about.kicker} title={t.about.title} color="magenta" />
 
@@ -20,7 +20,7 @@ export default function About() {
           </p>
 
           <dl
-            className="reveal md:col-span-2 rounded-xl border-2 border-neon-magenta/40 bg-card p-5 space-y-3"
+            className="reveal md:col-span-2 pixel-card border-2 border-neon-magenta/40 p-5 space-y-3"
             data-inview={inView}
             style={{ transitionDelay: '0.15s' }}
           >

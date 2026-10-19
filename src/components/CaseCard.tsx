@@ -25,7 +25,7 @@ export default function CaseCard({ caseData, stageNumber, onSelect, featured, in
       data-featured={featured}
       data-inview={inView}
       style={{ transitionDelay: `${delay}s` }}
-      className={`reveal neon-border group relative flex rounded-xl border border-border bg-card transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-[0_12px_40px_-12px_hsl(var(--neon-cyan)/0.5)] ${
+      className={`reveal neon-border group relative flex pixel-card border-border transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-[0_12px_40px_-12px_hsl(var(--neon-cyan)/0.5)] ${
         featured ? 'flex-col lg:flex-row' : 'flex-col'
       }`}
     >

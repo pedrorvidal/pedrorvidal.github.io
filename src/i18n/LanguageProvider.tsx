@@ -9,9 +9,9 @@ function initialLang(): Lang {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved === 'en' || saved === 'pt') return saved;
   } catch {
-    // Storage can be blocked (private mode); fall back to the browser language.
+    // Storage can be blocked (private mode); fall back to the default.
   }
-  return navigator.language?.toLowerCase().startsWith('pt') ? 'pt' : 'en';
+  return 'en';
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {

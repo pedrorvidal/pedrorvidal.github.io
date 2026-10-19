@@ -13,33 +13,34 @@
 @tailwind utilities;
 
 @layer base {
-  /* Light theme: neon tones darkened so text keeps WCAG AA contrast on white. */
+  /* Light theme: its own "arcade print" palette (warm paper, ink text, deep accents),
+     not the dark neons dimmed. Every accent passes WCAG AA as text on the paper. */
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 199 89% 32%;
+    --background: 40 33% 96%;
+    --foreground: 234 40% 14%;
+    --card: 40 50% 99%;
+    --card-foreground: 234 40% 14%;
+    --popover: 40 50% 99%;
+    --popover-foreground: 234 40% 14%;
+    --primary: 226 71% 40%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 214 32% 94%;
-    --secondary-foreground: 222 47% 11%;
-    --muted: 214 32% 94%;
-    --muted-foreground: 215 25% 35%;
-    --accent: 336 80% 42%;
+    --secondary: 38 30% 91%;
+    --secondary-foreground: 234 40% 14%;
+    --muted: 38 30% 91%;
+    --muted-foreground: 232 15% 34%;
+    --accent: 333 71% 40%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 72% 45%;
+    --destructive: 0 72% 42%;
     --destructive-foreground: 0 0% 100%;
-    --border: 214 32% 85%;
-    --input: 214 32% 85%;
-    --ring: 199 89% 32%;
+    --border: 35 20% 78%;
+    --input: 35 20% 78%;
+    --ring: 226 71% 40%;
     --radius: 0.5rem;
 
-    --neon-cyan: 199 89% 32%;
-    --neon-magenta: 336 80% 42%;
-    --neon-yellow: 30 95% 30%;
-    --neon-green: 142 72% 27%;
+    --neon-cyan: 226 71% 40%;
+    --neon-magenta: 333 71% 40%;
+    --neon-yellow: 25 90% 30%;
+    --neon-green: 160 84% 24%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -126,7 +127,8 @@
   }
 
   .light .text-glow {
-    text-shadow: none;
+    /* Print-style offset shadow instead of a neon glow. */
+    text-shadow: 3px 3px 0 hsl(var(--neon-magenta) / 0.18);
   }
 
   .neon-box {
@@ -136,7 +138,21 @@
   }
 
   .light .neon-box {
-    box-shadow: 0 10px 30px -10px hsl(var(--neon-cyan) / 0.45);
+    box-shadow: 6px 6px 0 0 hsl(var(--foreground));
+  }
+
+  /* Cards: soft neon lift in dark mode, hard pixel shadow in light mode. */
+  .pixel-card {
+    @apply rounded-xl border bg-card;
+  }
+
+  .light .pixel-card {
+    border-color: hsl(var(--foreground) / 0.85);
+    box-shadow: 4px 4px 0 0 hsl(var(--foreground) / 0.85);
+  }
+
+  .light .pixel-card:hover {
+    box-shadow: 7px 7px 0 0 hsl(var(--foreground) / 0.85);
   }
 
   /* 8-bit button: hard offset shadow that collapses on press. */

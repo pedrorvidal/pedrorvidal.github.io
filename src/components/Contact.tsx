@@ -67,7 +67,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" aria-labelledby="contact-title" className="py-24">
+    <section id="contact" aria-labelledby="contact-title" className="py-24 md:py-32">
       <div className="container" ref={ref}>
         <div className="text-center mb-12 space-y-3">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">{t.contact.kicker}</p>
@@ -83,7 +83,7 @@ export default function Contact() {
         <div className="reveal max-w-2xl mx-auto space-y-8" data-inview={inView}>
           <form
             onSubmit={handleSubmit}
-            className="relative space-y-5 rounded-2xl border-2 border-neon-yellow/40 bg-card p-6 sm:p-8"
+            className="relative space-y-5 pixel-card rounded-2xl border-2 border-neon-yellow/40 p-6 sm:p-8"
           >
             <input aria-hidden="true" className="hidden" name="honeypot" tabIndex={-1} autoComplete="off" />
             <div className="grid sm:grid-cols-2 gap-5">
