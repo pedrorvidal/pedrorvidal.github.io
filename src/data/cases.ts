@@ -10,6 +10,7 @@ import caseTorrentCover from '@/assets/images/cases/case-torrent.webp';
 import caseMedtronicDiabetesLatamCover from '@/assets/images/cases/case-medtronicdiabeteslatam.webp';
 import caseAgenciaF2fCover from '@/assets/images/cases/case-agenciaf2f.webp';
 import caseChegolaConsorcioCover from '@/assets/images/cases/case-chegolaconsorcio.webp';
+import caseMinervaFoodsCover from '@/assets/images/cases/case-minervafoods.webp';
 import caseBpTrackerCover from '@/assets/images/cases/case-bp-tracker.webp';
 import casePvBlocksSuiteCover from '@/assets/images/cases/case-pv-blocks-suite.webp';
 import type { Lang } from '@/i18n/strings';
@@ -136,71 +137,42 @@ export const cases: Case[] = [
     },
   },
   {
-    id: 'bp-tracker',
-    kind: 'personal',
+    id: 'minerva-portal',
+    kind: 'client',
     featured: true,
-    title: 'BP Tracker — Headless WordPress + React',
-    clientOrProject: 'Open source',
-    period: 'Sep 2026',
-    role: 'Full-Stack Developer',
-    coverImage: caseBpTrackerCover,
+    title: 'Minerva Foods Corporate Portal',
+    clientOrProject: 'Minerva Foods (via DEXA)',
+    period: '2022 – 2023',
+    role: 'WordPress Developer',
+    coverImage: caseMinervaFoodsCover,
     summary:
-      'Blood pressure tracking app with a headless WordPress backend (custom REST API + JWT auth) and a mobile-first React + TypeScript frontend with trend charts.',
+      'Full rebuild of the trilingual corporate portal of one of South America’s largest beef exporters, moving it off the Divi page builder onto a custom theme with 20+ custom ACF Pro blocks.',
     problem:
-      'Logging blood pressure twice a day is only useful if the history is easy to read — and health data demands real authentication, strict per-user data isolation, and protection against abuse, none of which WordPress offers out of the box for a decoupled SPA.',
+      'The portal was built on the Divi page builder: heavy markup and assets, layouts that drifted from the brand on every edit, and content spread across English, Spanish and Portuguese that was hard for the team to maintain consistently.',
     solution:
-      'Built a WordPress plugin that exposes a versioned REST API (bp-tracker/v1) over a custom post type with its own capabilities, secured by HS256 JWT access tokens kept in memory and rotating refresh tokens in an HttpOnly, SameSite=Strict cookie — with reuse detection that revokes the whole session, per-IP and per-account rate limiting, an exact-origin CORS policy, and an admin approval flow for new sign-ups. On top of it, a Vite + React 19 + TypeScript SPA (TanStack Query, Tailwind CSS v4, Recharts) with a fast, validated entry form and a history dashboard: period presets and custom ranges, averages compared against the previous period, ACC/AHA category distribution, a zoomable systolic/diastolic chart with auto-aggregation, and dark mode.',
-    stack: [
-      'WordPress',
-      'PHP 8.2',
-      'REST API',
-      'JWT',
-      'React 19',
-      'TypeScript',
-      'Tailwind CSS',
-      'TanStack Query',
-      'Recharts',
-      'PHPUnit',
-      'Vitest',
-      'GitHub Actions',
-      'Docker',
-    ],
-    tags: ['Headless CMS', 'Security', 'Data viz', 'CI/CD'],
+      'As part of the DEXA team, rebuilt the whole site on a custom WordPress theme, replacing Divi with a library of 20+ custom blocks built with ACF Pro. Editors compose pages from purpose-built, on-brand components (hero sliders, news, products, sustainability and investor content) instead of free-form builder layouts, in all three languages.',
+    stack: ['WordPress', 'PHP', 'ACF Pro', 'MySQL', 'Jenkins', 'GitHub Actions'],
+    tags: ['Rebuild', 'Custom theme', 'Custom blocks', 'Corporate', 'Agribusiness'],
     highlights: [
-      'Custom REST API with JWT access tokens and rotating, reuse-detecting refresh tokens',
-      'Rate limiting, strict CORS, CSRF header and role-based approval flow for sign-ups',
-      'Mobile-first dashboard with period comparison, BP categories and a zoomable trend chart',
-      'Accessible forms (aria-describedby, focus management, live status) and full dark mode',
-      'CI with lint, PHPStan level 6, type-check, tests, dependency audit and Dependabot',
+      'Divi page builder replaced by a custom theme',
+      'Library of 20+ custom ACF Pro blocks for on-brand page building',
+      'Trilingual site (EN / ES / PT)',
     ],
-    metrics: [
-      '320+ automated tests (PHPUnit + Vitest)',
-      'PHPStan level 6 · strict TypeScript',
-      'Zero-warning ESLint gate in CI',
-    ],
-    links: [{ label: 'GitHub', url: 'https://github.com/pedrorvidal/bp-tracker' }],
+    links: [{ label: 'Live site', url: 'https://minervafoods.com/' }],
     pt: {
-      title: 'BP Tracker — WordPress headless + React',
-      period: 'Set 2026',
-      role: 'Desenvolvedor Full-Stack',
+      title: 'Portal Corporativo Minerva Foods',
+      role: 'Desenvolvedor WordPress',
       summary:
-        'App de acompanhamento de pressão arterial com back-end WordPress headless (REST API própria + autenticação JWT) e front-end React + TypeScript mobile-first com gráficos de tendência.',
+        'Reconstrução completa do portal corporativo trilíngue de uma das maiores exportadoras de carne bovina da América do Sul, saindo do page builder Divi para um tema próprio com mais de 20 blocos ACF Pro sob medida.',
       problem:
-        'Registrar a pressão duas vezes por dia só é útil se o histórico for fácil de ler, e dados de saúde exigem autenticação de verdade, isolamento estrito por usuário e proteção contra abuso, nada disso pronto no WordPress para uma SPA desacoplada.',
+        'O portal era feito no page builder Divi: markup e assets pesados, layouts que fugiam da marca a cada edição e conteúdo em inglês, espanhol e português difícil de manter com consistência.',
       solution:
-        'Criei um plugin WordPress que expõe uma REST API versionada (bp-tracker/v1) sobre um custom post type com capabilities próprias, protegida por access tokens JWT HS256 em memória e refresh tokens rotativos em cookie HttpOnly e SameSite=Strict, com detecção de reuso que revoga a sessão inteira, rate limiting por IP e por conta, CORS de origem exata e fluxo de aprovação de cadastros pelo admin. Por cima, uma SPA Vite + React 19 + TypeScript (TanStack Query, Tailwind CSS v4, Recharts) com formulário rápido e validado e um painel de histórico: períodos pré-definidos e personalizados, médias comparadas ao período anterior, distribuição por categoria ACC/AHA, gráfico sistólica/diastólica com zoom e agregação automática, e modo escuro.',
-      tags: ['CMS headless', 'Segurança', 'Visualização de dados', 'CI/CD'],
+        'Com o time da DEXA, reconstruí o site inteiro em um tema WordPress próprio, trocando o Divi por uma biblioteca de mais de 20 blocos sob medida feitos com ACF Pro. Os editores montam as páginas com componentes pensados para a marca (sliders de destaque, notícias, produtos, sustentabilidade e conteúdo para investidores) em vez de layouts livres de builder, nos três idiomas.',
+      tags: ['Reconstrução', 'Tema próprio', 'Blocos sob medida', 'Institucional', 'Agronegócio'],
       highlights: [
-        'REST API própria com access tokens JWT e refresh tokens rotativos com detecção de reuso',
-        'Rate limiting, CORS estrito, header CSRF e aprovação de cadastros por papel',
-        'Painel mobile-first com comparação de períodos, categorias de pressão e gráfico com zoom',
-        'Formulários acessíveis (aria-describedby, gestão de foco, status ao vivo) e modo escuro completo',
-        'CI com lint, PHPStan nível 6, type-check, testes, auditoria de dependências e Dependabot',
-      ],
-      metrics: [
-        '320+ testes automatizados (PHPUnit + Vitest)',
-        'PHPStan nível 6 · TypeScript estrito',
-        'ESLint sem warnings como gate no CI',
+        'Page builder Divi substituído por tema próprio',
+        'Biblioteca de mais de 20 blocos ACF Pro sob medida, fiéis à marca',
+        'Site trilíngue (EN / ES / PT)',
       ],
     },
   },
@@ -271,6 +243,74 @@ export const cases: Case[] = [
         '~300 testes automatizados (PHPUnit + Jest)',
         'Todo bloco tem testes de render e de editor',
         'Inglês + pt_BR de fábrica',
+      ],
+    },
+  },
+  {
+    id: 'bp-tracker',
+    kind: 'personal',
+    title: 'BP Tracker — Headless WordPress + React',
+    clientOrProject: 'Open source',
+    period: 'Sep 2026',
+    role: 'Full-Stack Developer',
+    coverImage: caseBpTrackerCover,
+    summary:
+      'Blood pressure tracking app with a headless WordPress backend (custom REST API + JWT auth) and a mobile-first React + TypeScript frontend with trend charts.',
+    problem:
+      'Logging blood pressure twice a day is only useful if the history is easy to read — and health data demands real authentication, strict per-user data isolation, and protection against abuse, none of which WordPress offers out of the box for a decoupled SPA.',
+    solution:
+      'Built a WordPress plugin that exposes a versioned REST API (bp-tracker/v1) over a custom post type with its own capabilities, secured by HS256 JWT access tokens kept in memory and rotating refresh tokens in an HttpOnly, SameSite=Strict cookie — with reuse detection that revokes the whole session, per-IP and per-account rate limiting, an exact-origin CORS policy, and an admin approval flow for new sign-ups. On top of it, a Vite + React 19 + TypeScript SPA (TanStack Query, Tailwind CSS v4, Recharts) with a fast, validated entry form and a history dashboard: period presets and custom ranges, averages compared against the previous period, ACC/AHA category distribution, a zoomable systolic/diastolic chart with auto-aggregation, and dark mode.',
+    stack: [
+      'WordPress',
+      'PHP 8.2',
+      'REST API',
+      'JWT',
+      'React 19',
+      'TypeScript',
+      'Tailwind CSS',
+      'TanStack Query',
+      'Recharts',
+      'PHPUnit',
+      'Vitest',
+      'GitHub Actions',
+      'Docker',
+    ],
+    tags: ['Headless CMS', 'Security', 'Data viz', 'CI/CD'],
+    highlights: [
+      'Custom REST API with JWT access tokens and rotating, reuse-detecting refresh tokens',
+      'Rate limiting, strict CORS, CSRF header and role-based approval flow for sign-ups',
+      'Mobile-first dashboard with period comparison, BP categories and a zoomable trend chart',
+      'Accessible forms (aria-describedby, focus management, live status) and full dark mode',
+      'CI with lint, PHPStan level 6, type-check, tests, dependency audit and Dependabot',
+    ],
+    metrics: [
+      '320+ automated tests (PHPUnit + Vitest)',
+      'PHPStan level 6 · strict TypeScript',
+      'Zero-warning ESLint gate in CI',
+    ],
+    links: [{ label: 'GitHub', url: 'https://github.com/pedrorvidal/bp-tracker' }],
+    pt: {
+      title: 'BP Tracker — WordPress headless + React',
+      period: 'Set 2026',
+      role: 'Desenvolvedor Full-Stack',
+      summary:
+        'App de acompanhamento de pressão arterial com back-end WordPress headless (REST API própria + autenticação JWT) e front-end React + TypeScript mobile-first com gráficos de tendência.',
+      problem:
+        'Registrar a pressão duas vezes por dia só é útil se o histórico for fácil de ler, e dados de saúde exigem autenticação de verdade, isolamento estrito por usuário e proteção contra abuso, nada disso pronto no WordPress para uma SPA desacoplada.',
+      solution:
+        'Criei um plugin WordPress que expõe uma REST API versionada (bp-tracker/v1) sobre um custom post type com capabilities próprias, protegida por access tokens JWT HS256 em memória e refresh tokens rotativos em cookie HttpOnly e SameSite=Strict, com detecção de reuso que revoga a sessão inteira, rate limiting por IP e por conta, CORS de origem exata e fluxo de aprovação de cadastros pelo admin. Por cima, uma SPA Vite + React 19 + TypeScript (TanStack Query, Tailwind CSS v4, Recharts) com formulário rápido e validado e um painel de histórico: períodos pré-definidos e personalizados, médias comparadas ao período anterior, distribuição por categoria ACC/AHA, gráfico sistólica/diastólica com zoom e agregação automática, e modo escuro.',
+      tags: ['CMS headless', 'Segurança', 'Visualização de dados', 'CI/CD'],
+      highlights: [
+        'REST API própria com access tokens JWT e refresh tokens rotativos com detecção de reuso',
+        'Rate limiting, CORS estrito, header CSRF e aprovação de cadastros por papel',
+        'Painel mobile-first com comparação de períodos, categorias de pressão e gráfico com zoom',
+        'Formulários acessíveis (aria-describedby, gestão de foco, status ao vivo) e modo escuro completo',
+        'CI com lint, PHPStan nível 6, type-check, testes, auditoria de dependências e Dependabot',
+      ],
+      metrics: [
+        '320+ testes automatizados (PHPUnit + Vitest)',
+        'PHPStan nível 6 · TypeScript estrito',
+        'ESLint sem warnings como gate no CI',
       ],
     },
   },
@@ -624,12 +664,11 @@ export const cases: Case[] = [
     problem:
       'Program results were tracked by hand in Excel spreadsheets, which made logging slow, error-prone and hard to filter or audit.',
     solution:
-      'As the sole developer on the module, built a custom WordPress plugin integrated with an external API that automates result logging and filtering. On the same account, worked on the rebuild of MinervaFoods’ corporate portal, replacing the Divi page builder with a custom theme built on 20+ custom ACF Pro blocks.',
+      'As the sole developer on the module, built a custom WordPress plugin integrated with an external API that automates result logging and filtering. Built on the same account as the corporate portal rebuild.',
     stack: ['WordPress', 'PHP', 'MySQL', 'ACF Pro', 'REST API', 'Jenkins', 'GitHub Actions'],
     tags: ['Custom plugin', 'API integration', 'Agribusiness'],
     highlights: [
       'Manual Excel tracking replaced by automated logging and filtering',
-      'Corporate portal moved off Divi onto 20+ custom blocks',
     ],
     metrics: [],
     pt: {
@@ -640,11 +679,10 @@ export const cases: Case[] = [
       problem:
         'Os resultados do programa eram registrados à mão em planilhas Excel, o que deixava o lançamento lento, sujeito a erro e difícil de filtrar ou auditar.',
       solution:
-        'Como único desenvolvedor do módulo, criei um plugin WordPress integrado a uma API externa que automatiza o registro e a filtragem dos resultados. Na mesma conta, participei da reconstrução do portal corporativo da MinervaFoods, trocando o page builder Divi por um tema próprio com mais de 20 blocos ACF Pro.',
+        'Como único desenvolvedor do módulo, criei um plugin WordPress integrado a uma API externa que automatiza o registro e a filtragem dos resultados. Feito na mesma conta da reconstrução do portal corporativo.',
       tags: ['Plugin sob medida', 'Integração de API', 'Agronegócio'],
       highlights: [
         'Controle manual em Excel substituído por registro e filtragem automáticos',
-        'Portal corporativo migrado do Divi para mais de 20 blocos sob medida',
       ],
     },
   },
