@@ -31,8 +31,11 @@ This is my personal portfolio, built from the ground up with a modern frontend s
 - 🎨 Utility-first styling with **Tailwind CSS**
 - 🧩 Accessible, composable UI with **shadcn/ui** components
 - 🔷 Fully typed with **TypeScript**
-- 🧪 Unit tested with **Vitest**
-- 🚀 Auto-deployed to **GitHub Pages**
+- 🌎 Bilingual (English / Portuguese) UI and case studies
+- 🕹️ Arcade theme with a Konami code easter egg (↑ ↑ ↓ ↓ ← → ← → B A, or tap the avatar 7 times)
+- 🧪 Unit and component tests with **Vitest** + **Testing Library**
+- ✅ CI on every pull request: lint, type-check, tests and build
+- 🚀 Auto-deployed to **GitHub Pages** on every push to `main`
 
 ## 🚀 Getting Started
 
@@ -59,23 +62,46 @@ npm run dev
 
 The app will be available at `http://localhost:8080`.
 
+> After switching branches, run `npm install` again: a branch may add new dependencies (for example the self-hosted fonts), and Vite fails with `ENOENT` errors when they are missing.
+
+### Environment variables
+
+The contact form sends messages through [Static Forms](https://www.staticforms.dev/). Create a `.env.local` file (it is git-ignored) with your key:
+
+```bash
+VITE_STATICFORMS_API_KEY=your-key-here
+```
+
+Without it the site still works, but the form shows a "missing configuration" message instead of sending.
+
 ## 📜 Scripts
 
 | Command | Description |
 |---|---|
 | `npm run dev` | Start local development server |
 | `npm run build` | Build for production |
+| `npm run build:dev` | Build in development mode |
 | `npm run preview` | Preview the production build |
-| `npm run test` | Run unit tests with Vitest |
+| `npm run test` | Run the test suite once |
+| `npm run test:watch` | Run tests in watch mode |
 | `npm run lint` | Lint the codebase with ESLint |
+| `npm run deploy` | Build and push `dist/` to the `gh-pages` branch (manual fallback, see below) |
 
 ## 🗂️ Project Structure
 
 ```
 pedrorvidal.github.io/
-├── public/          # Static assets
-├── scripts/         # Utility/build scripts
-├── src/             # Application source code
+├── .github/workflows/
+│   ├── ci.yml       # Checks on pull requests and pushes to main
+│   └── deploy.yml   # Build + deploy to GitHub Pages
+├── public/          # Static assets (favicons, CV PDFs, og-image)
+├── scripts/         # Screenshot capture scripts for case covers
+├── src/
+│   ├── components/  # Page sections and UI components
+│   ├── data/        # Case studies (cases.ts)
+│   ├── i18n/        # English / Portuguese strings
+│   ├── cheat/       # Konami code easter egg
+│   └── test/        # Vitest test files
 ├── index.html       # Entry HTML
 ├── vite.config.ts   # Vite configuration
 ├── tailwind.config.ts
@@ -83,9 +109,60 @@ pedrorvidal.github.io/
 └── vitest.config.ts
 ```
 
+## 🧪 Testing
+
+Tests use **Vitest** with **Testing Library** in a jsdom environment. They live in `src/test/`:
+
+| File | Covers |
+|---|---|
+| `konami.test.tsx` | The Konami code hook: full sequence, uppercase keys, recovery from a wrong key, ignoring form fields |
+| `cases.test.ts` | Case data: unique ids, a Portuguese summary for every case, English text kept in English mode |
+| `CaseGrid.test.tsx` | Case grid: boss stages first, secret stage hidden, filters, modal navigation |
+| `Header.test.tsx` | Language and theme toggles |
+
+```bash
+npm test                                   # run once
+npm run test:watch                         # re-run on save
+npx tsc -p tsconfig.app.json --noEmit      # type-check
+```
+
+## ⚙️ CI/CD
+
+Two GitHub Actions workflows live in `.github/workflows/`:
+
+- **CI** (`ci.yml`) runs on every pull request and every push to `main`: `npm ci`, lint, type-check, tests and a production build. A pull request should only be merged when it passes.
+- **Deploy** (`deploy.yml`) runs on every push to `main`, and can also be started by hand. It runs the same checks, builds the site and publishes `dist/` to GitHub Pages. If any check fails, nothing is deployed and the live site stays as it was.
+
+The build reads `VITE_STATICFORMS_API_KEY` from a repository secret with the same name (**Settings → Secrets and variables → Actions**).
+
 ## 🚢 Deployment
 
-This site is deployed automatically to **GitHub Pages** from the `main` branch. Any push to `main` triggers a new deployment.
+The site is served by **GitHub Pages** with **Settings → Pages → Source** set to **GitHub Actions**. Merging into `main` is all it takes: the Deploy workflow publishes it, usually within two minutes, at https://pedrorvidal.github.io/.
+
+### If the workflow did not run
+
+1. **Re-run it by hand.** In the **Actions** tab, open **Deploy** and click **Run workflow** on `main`, or from a terminal:
+
+   ```bash
+   gh workflow run deploy.yml --ref main
+   gh run watch          # follow it
+   ```
+
+2. **If it ran and failed**, open the run log in the **Actions** tab, fix the failing step (lint, types, tests or build) in a pull request, and merge it. The merge triggers a new deployment.
+
+3. **If GitHub Actions is unavailable**, publish from your machine through the `gh-pages` branch:
+
+   ```bash
+   git checkout main && git pull
+   npm ci
+   npm run deploy        # builds and pushes dist/ to the gh-pages branch
+   ```
+
+   Then set **Settings → Pages → Source** to **Deploy from a branch**, branch `gh-pages`, folder `/ (root)`. GitHub Pages serves only one source at a time, so this step is required. Once Actions is back, set the source to **GitHub Actions** again, so the next push to `main` deploys normally.
+
+   `npm run deploy` builds with your local `.env.local`, so make sure `VITE_STATICFORMS_API_KEY` is set there, or the published contact form will not send.
+
+If the site still looks old after a deployment, hard-refresh the page (Ctrl+Shift+R / Cmd+Shift+R) to skip the browser cache.
 
 ---
 
