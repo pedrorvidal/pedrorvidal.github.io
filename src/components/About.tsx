@@ -1,76 +1,39 @@
-import { GraduationCap, Languages } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
-
-const facts = [
-  {
-    icon: GraduationCap,
-    label: 'Education',
-    value: "Bachelor's Degree in Computer Science",
-    detail: 'URI — Frederico Westphalen Campus, 2005',
-  },
-  {
-    icon: Languages,
-    label: 'Language',
-    value: 'Fluent English',
-    detail: 'Portuguese (native)',
-  },
-];
+import { useLanguage } from '@/i18n/useLanguage';
+import SectionHeading from './SectionHeading';
 
 export default function About() {
   const { ref, inView } = useInView();
+  const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-24 bg-secondary/30">
+    <section id="about" aria-labelledby="about-title" className="py-24 md:py-32">
       <div className="container" ref={ref}>
-        <div className="text-center mb-14">
-          <p className="text-sm font-mono text-primary mb-2">Background</p>
-          <h2 className="text-3xl md:text-4xl font-bold">About Me</h2>
-        </div>
+        <SectionHeading id="about-title" kicker={t.about.kicker} title={t.about.title} color="magenta" />
 
-        <div className="max-w-2xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-5 gap-8 items-start">
           <p
-            className="text-muted-foreground leading-relaxed"
-            style={{
-              opacity: inView ? 1 : 0,
-              transform: inView ? 'translateY(0)' : 'translateY(20px)',
-              transition: 'all 0.5s ease-out',
-            }}
+            className="reveal md:col-span-3 text-lg text-muted-foreground leading-relaxed"
+            data-inview={inView}
           >
-            Full-Stack Developer with 20+ years of experience in PHP,
-            WordPress, and Laravel, with strong hands-on work in requirements
-            gathering and data modeling for complex integrations. Proven
-            track record managing multiple simultaneous projects for
-            international brands such as Merz Aesthetics, Torrent Pharma, and
-            Medtronic, with a consistent history of diagnosing and fixing
-            performance/SEO issues, responding to security incidents, and
-            standardizing maintenance processes at scale.
+            {t.about.bio}
           </p>
 
-          {/* Quick facts */}
-          <div className="grid sm:grid-cols-2 gap-4">
-            {facts.map((fact, i) => (
+          <dl
+            className="reveal md:col-span-2 pixel-card border-2 border-neon-magenta/40 p-5 space-y-3"
+            data-inview={inView}
+            style={{ transitionDelay: '0.15s' }}
+          >
+            {t.about.stats.map((stat) => (
               <div
-                key={fact.label}
-                className="flex items-start gap-3 p-4 rounded-lg border border-border bg-card"
-                style={{
-                  opacity: inView ? 1 : 0,
-                  transform: inView ? 'translateY(0)' : 'translateY(20px)',
-                  transition: `all 0.5s ease-out ${0.2 + i * 0.1}s`,
-                }}
+                key={stat.label}
+                className="flex items-baseline justify-between gap-4 border-b border-dashed border-border pb-2 last:border-0 last:pb-0"
               >
-                <fact.icon size={20} className="text-primary shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-xs font-mono text-muted-foreground">
-                    {fact.label}
-                  </p>
-                  <p className="font-semibold text-sm mt-0.5">{fact.value}</p>
-                  <p className="text-xs text-muted-foreground mt-0.5">
-                    {fact.detail}
-                  </p>
-                </div>
+                <dt className="font-arcade text-[0.625rem] uppercase text-neon-magenta shrink-0">{stat.label}</dt>
+                <dd className="text-sm font-semibold text-right">{stat.value}</dd>
               </div>
             ))}
-          </div>
+          </dl>
         </div>
       </div>
     </section>

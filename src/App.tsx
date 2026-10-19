@@ -1,19 +1,18 @@
 import { Toaster } from '@/components/ui/toaster';
-import { Toaster as Sonner } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { LanguageProvider } from '@/i18n/LanguageProvider';
+import { CheatProvider } from '@/cheat/CheatProvider';
 import Index from './pages/Index';
 
-const queryClient = new QueryClient();
-
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <Index />
-    </TooltipProvider>
-  </QueryClientProvider>
+  <LanguageProvider>
+    <CheatProvider>
+      <TooltipProvider>
+        <Toaster position="bottom-center" />
+        <Index />
+      </TooltipProvider>
+    </CheatProvider>
+  </LanguageProvider>
 );
 
 export default App;

@@ -1,31 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+/* Self-hosted fonts, Latin + Latin Extended only (covers PT accents). */
+@import '@fontsource/press-start-2p/latin-400.css';
+@import '@fontsource/press-start-2p/latin-ext-400.css';
+@import '@fontsource/chakra-petch/latin-400.css';
+@import '@fontsource/chakra-petch/latin-ext-400.css';
+@import '@fontsource/chakra-petch/latin-600.css';
+@import '@fontsource/chakra-petch/latin-ext-600.css';
+@import '@fontsource/chakra-petch/latin-700.css';
+@import '@fontsource/chakra-petch/latin-ext-700.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  /* Light theme: its own "arcade print" palette (warm paper, ink text, deep accents),
+     not the dark neons dimmed. Every accent passes WCAG AA as text on the paper. */
   :root {
-    --background: 220 20% 97%;
-    --foreground: 222 47% 11%;
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 221 83% 53%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    --accent: 330 65% 55%;
+    --background: 40 33% 96%;
+    --foreground: 234 40% 14%;
+    --card: 40 50% 99%;
+    --card-foreground: 234 40% 14%;
+    --popover: 40 50% 99%;
+    --popover-foreground: 234 40% 14%;
+    --primary: 226 71% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 38 30% 91%;
+    --secondary-foreground: 234 40% 14%;
+    --muted: 38 30% 91%;
+    --muted-foreground: 232 15% 34%;
+    --accent: 333 71% 40%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 221 83% 53%;
-    --radius: 0.75rem;
+    --destructive: 0 72% 42%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 35 20% 78%;
+    --input: 35 20% 78%;
+    --ring: 226 71% 40%;
+    --radius: 0.5rem;
+
+    --neon-cyan: 226 71% 40%;
+    --neon-magenta: 333 71% 40%;
+    --neon-yellow: 25 90% 30%;
+    --neon-green: 160 84% 24%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -38,34 +53,39 @@
   }
 
   .dark {
-    --background: 222 47% 6%;
+    --background: 240 33% 3%;
     --foreground: 210 40% 96%;
-    --card: 222 47% 9%;
+    --card: 240 29% 8%;
     --card-foreground: 210 40% 96%;
-    --popover: 222 47% 9%;
+    --popover: 240 29% 8%;
     --popover-foreground: 210 40% 96%;
-    --primary: 221 83% 53%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 222 30% 14%;
+    --primary: 184 100% 50%;
+    --primary-foreground: 240 33% 3%;
+    --secondary: 240 25% 13%;
     --secondary-foreground: 210 40% 96%;
-    --muted: 222 30% 14%;
-    --muted-foreground: 215 20% 55%;
-    --accent: 330 65% 55%;
+    --muted: 240 25% 13%;
+    --muted-foreground: 215 20% 70%;
+    --accent: 330 100% 60%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 222 30% 18%;
-    --input: 222 30% 18%;
-    --ring: 221 83% 53%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 22% 20%;
+    --input: 240 22% 20%;
+    --ring: 184 100% 50%;
 
-    --sidebar-background: 222 47% 6%;
+    --neon-cyan: 184 100% 50%;
+    --neon-magenta: 330 100% 60%;
+    --neon-yellow: 54 100% 50%;
+    --neon-green: 145 100% 50%;
+
+    --sidebar-background: 240 33% 3%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 221 83% 53%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222 30% 14%;
+    --sidebar-primary: 184 100% 50%;
+    --sidebar-primary-foreground: 240 33% 3%;
+    --sidebar-accent: 240 25% 13%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 222 30% 18%;
-    --sidebar-ring: 221 83% 53%;
+    --sidebar-border: 240 22% 20%;
+    --sidebar-ring: 184 100% 50%;
   }
 }
 
@@ -76,15 +96,193 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-size: 1.0625rem;
   }
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  ::selection {
+    background: hsl(var(--neon-magenta));
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 3px solid hsl(var(--neon-yellow));
+    outline-offset: 3px;
   }
 }
 
-@layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+@layer components {
+  /* Pixel font is display-only: generous line-height keeps it legible. */
+  .font-arcade {
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 12px currentColor;
+  }
+
+  .light .text-glow {
+    /* Print-style offset shadow instead of a neon glow. */
+    text-shadow: 3px 3px 0 hsl(var(--neon-magenta) / 0.18);
+  }
+
+  .neon-box {
+    box-shadow:
+      0 0 18px hsl(var(--neon-cyan) / 0.35),
+      inset 0 0 10px hsl(var(--neon-cyan) / 0.15);
+  }
+
+  .light .neon-box {
+    box-shadow: 6px 6px 0 0 hsl(var(--foreground));
+  }
+
+  /* Cards: soft neon lift in dark mode, hard pixel shadow in light mode. */
+  .pixel-card {
+    @apply rounded-xl border bg-card;
+  }
+
+  .light .pixel-card {
+    border-color: hsl(var(--foreground) / 0.85);
+    box-shadow: 4px 4px 0 0 hsl(var(--foreground) / 0.85);
+  }
+
+  .light .pixel-card:hover {
+    box-shadow: 7px 7px 0 0 hsl(var(--foreground) / 0.85);
+  }
+
+  /* 8-bit button: hard offset shadow that collapses on press. */
+  .pixel-btn {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3.5 text-xs uppercase transition-[transform,box-shadow,background-color] duration-100;
+    font-family: 'Press Start 2P', ui-monospace, monospace;
+    line-height: 1.6;
+    box-shadow: 4px 4px 0 0 hsl(var(--foreground) / 0.85);
+  }
+
+  .pixel-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 hsl(var(--foreground) / 0.85);
+  }
+
+  .pixel-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 0 hsl(var(--foreground) / 0.85);
+  }
+
+  /* Animated gradient border used on featured cards. */
+  .neon-border {
+    position: relative;
+  }
+
+  .neon-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(
+      90deg,
+      hsl(var(--neon-cyan)),
+      hsl(var(--neon-magenta)),
+      hsl(var(--neon-yellow)),
+      hsl(var(--neon-cyan))
+    );
+    background-size: 200% 100%;
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    @apply animate-border-sweep;
+  }
+
+  .neon-border:hover::before,
+  .neon-border:focus-within::before,
+  .neon-border[data-featured='true']::before {
+    opacity: 1;
+  }
+
+  /* Reveal-on-scroll: stepped, slightly "pixelated" entrance. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.6s steps(6),
+      transform 0.6s steps(6);
+  }
+
+  .reveal[data-inview='true'] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* CRT scanlines over the whole page (dark mode only, purely decorative). */
+.dark body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.025) 0,
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+/* Konami cheat mode: stronger CRT and a slow colour cycle on neon accents. */
+html[data-cheat='true'] body::after {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.18) 0,
+    rgba(0, 0, 0, 0.18) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+html[data-cheat='true'] :is(h2, .text-glow, .pixel-btn, .neon-border::before) {
+  animation: cheat-hue 4s linear infinite;
+}
+
+@keyframes cheat-hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  html[data-cheat='true'] :is(h2, .text-glow, .pixel-btn) {
+    animation: none;
   }
 }
