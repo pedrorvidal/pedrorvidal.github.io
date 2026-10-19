@@ -1,4 +1,4 @@
-import { Bot, Code2, Database, GitBranch, LayoutTemplate, Users } from 'lucide-react';
+import { Bot, Code2, Database, GitBranch, LayoutTemplate, Plug } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 import { useLanguage } from '@/i18n/useLanguage';
 import SectionHeading from './SectionHeading';
@@ -8,37 +8,37 @@ const skillGroups = [
     icon: Code2,
     color: 'cyan',
     category: { en: 'Languages & Frameworks', pt: 'Linguagens & Frameworks' },
-    skills: ['PHP', 'WordPress', 'Laravel', 'CodeIgniter', 'Symfony', 'Silex', 'Doctrine', 'JavaScript', 'TypeScript', 'HTML/CSS'],
+    skills: ['PHP 8', 'WordPress', 'Multisite', 'WooCommerce', 'ACF Pro', 'Bedrock', 'WP-CLI', 'Laravel', 'CodeIgniter', 'Symfony'],
   },
   {
     icon: LayoutTemplate,
     color: 'magenta',
     category: { en: 'Frontend', pt: 'Frontend' },
-    skills: ['React', 'Next.js', 'Gutenberg', 'Tailwind CSS', 'Vite', 'GraphQL'],
+    skills: ['Gutenberg', 'Interactivity API', 'React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Sass', 'Vite'],
   },
   {
     icon: Database,
     color: 'yellow',
-    category: { en: 'Data & Infrastructure', pt: 'Dados & Infraestrutura' },
-    skills: ['MySQL/MariaDB', 'PostgreSQL', 'SQL Server', 'Redis', 'Docker', 'REST APIs', 'Git/GitHub/GitLab/Bitbucket'],
+    category: { en: 'Data & Performance', pt: 'Dados & Performance' },
+    skills: ['MySQL tuning', 'PostgreSQL', 'Redis', 'Core Web Vitals', 'Technical SEO', 'Cloudflare', 'REST APIs', 'JWT'],
   },
   {
     icon: GitBranch,
     color: 'green',
-    category: { en: 'CI/CD & Tools', pt: 'CI/CD & Ferramentas' },
-    skills: ['GitHub Actions', 'Bitbucket Pipelines', 'Jenkins', 'Vercel', 'Figma', 'Linux', 'Drupal'],
+    category: { en: 'Testing & CI/CD', pt: 'Testes & CI/CD' },
+    skills: ['PHPUnit', 'Jest', 'Vitest', 'PHPStan', 'WPCS', 'Docker', 'GitHub Actions', 'Bitbucket Pipelines', 'Jenkins'],
   },
   {
     icon: Bot,
     color: 'cyan',
-    category: { en: 'AI & Automation', pt: 'IA & Automação' },
-    skills: ['Claude Code', 'MCP', 'Playwright', 'Workflow Orchestration', 'QA Automation'],
+    category: { en: 'AI & Ways of working', pt: 'IA & Forma de trabalho' },
+    skills: ['Claude Code', 'MCP', 'Playwright', 'AI-assisted workflows', 'Scrum', 'Kanban'],
   },
   {
-    icon: Users,
+    icon: Plug,
     color: 'magenta',
-    category: { en: 'Methodologies & Soft Skills', pt: 'Metodologias & Soft Skills' },
-    skills: ['Scrum', 'Kanban', 'Communication', 'Problem Solving'],
+    category: { en: 'Integrations', pt: 'Integrações' },
+    skills: ['RD Station', 'Mailchimp', 'Salesforce', 'SFMC', 'Google Tag Manager', 'Google Places API'],
   },
 ] as const;
 

@@ -60,7 +60,7 @@ export const cases: Case[] = [
     title: 'GLP Brazil Website',
     clientOrProject: 'GLP',
     period: '2025',
-    role: 'Frontend Developer',
+    role: 'Senior WordPress Developer',
     coverImage: caseGlpCover,
     summary:
       "Led the migration and performance/SEO turnaround of GLP's ~900-page, investor-facing corporate site.",
@@ -79,7 +79,7 @@ export const cases: Case[] = [
     links: [{ label: 'Live site', url: 'https://glp.com.br/' }],
     pt: {
       title: 'Site GLP Brasil',
-      role: 'Desenvolvedor Frontend',
+      role: 'Desenvolvedor WordPress Sênior',
       summary:
         'Liderei a migração e a virada de performance e SEO do site corporativo da GLP, com ~900 páginas voltadas a investidores.',
       problem:
@@ -280,7 +280,7 @@ export const cases: Case[] = [
     title: 'Medtronic Diabetes LATAM',
     clientOrProject: 'Medtronic Diabetes LATAM',
     period: '2025',
-    role: 'Frontend Developer',
+    role: 'Senior WordPress Developer',
     coverImage: caseMedtronicDiabetesLatamCover,
     summary:
       'Regional healthcare site with 5 country-level RD Station integrations and error-free lead capture.',
@@ -294,7 +294,7 @@ export const cases: Case[] = [
     metrics: ['100% error-free lead capture across 5 countries'],
     links: [{ label: 'Live site', url: 'https://medtronicdiabeteslatam.com/' }],
     pt: {
-      role: 'Desenvolvedor Frontend',
+      role: 'Desenvolvedor WordPress Sênior',
       summary:
         'Site regional de saúde com 5 integrações com o RD Station, uma por país, e captura de leads sem erros.',
       problem:
@@ -312,28 +312,28 @@ export const cases: Case[] = [
     title: 'Merz Aesthetics LATAM',
     clientOrProject: 'Merz Aesthetics',
     period: '2025',
-    role: 'Frontend Developer',
+    role: 'Senior WordPress Developer',
     coverImage: caseMerzAestheticsCover,
     summary:
-      'Localized corporate sites for Brazil, Argentina, Chile, Colombia and LATAM, with brand consistency and reliable conversion tracking across 5 countries.',
+      'Localized corporate sites for Brazil, Argentina, Colombia, Mexico and a regional LATAM site, with reliable conversion tracking and Core Web Vitals work across the network.',
     problem:
       'Content was fragmented across pages, and conversion-event failures were distorting campaign data the marketing team relied on for media decisions.',
     solution:
-      'Unified content blocks and navigation patterns across templates, and diagnosed/fixed conversion-tracking failures (Google Tag Manager/DataLayer) across the 5-site network, restoring reliable analytics.',
-    stack: ['WordPress', 'Timber', 'Twig', 'jQuery', 'Google Tag Manager', 'Apache'],
-    tags: ['Localization', 'Analytics', 'Multi-site'],
+      'Unified content blocks and navigation patterns across templates, diagnosed and fixed conversion-tracking failures (Google Tag Manager/DataLayer) across the 5-site network, and improved Core Web Vitals (WebP/AVIF, lazy loading, critical CSS, Cloudflare) and back-end performance (MySQL query tuning, Redis caching).',
+    stack: ['WordPress', 'Timber', 'Twig', 'Google Tag Manager', 'Cloudflare', 'Redis'],
+    tags: ['Localization', 'Analytics', 'Core Web Vitals', 'Multi-site'],
     highlights: ['Restored accurate conversion tracking across a 5-site network'],
     metrics: [],
     links: [{ label: 'Live site', url: 'https://merzaesthetics.com.br/' }],
     pt: {
-      role: 'Desenvolvedor Frontend',
+      role: 'Desenvolvedor WordPress Sênior',
       summary:
-        'Sites corporativos localizados para Brasil, Argentina, Chile, Colômbia e LATAM, com consistência de marca e rastreamento de conversões confiável em 5 países.',
+        'Sites corporativos localizados para Brasil, Argentina, Colômbia, México e um site regional LATAM, com rastreamento de conversões confiável e trabalho de Core Web Vitals na rede.',
       problem:
         'O conteúdo estava fragmentado entre páginas, e falhas nos eventos de conversão distorciam os dados de campanha que o marketing usava para decidir mídia.',
       solution:
-        'Unifiquei blocos de conteúdo e padrões de navegação entre templates, e diagnostiquei e corrigi falhas de rastreamento de conversão (Google Tag Manager/DataLayer) na rede de 5 sites, devolvendo confiabilidade aos dados.',
-      tags: ['Localização', 'Analytics', 'Multi-site'],
+        'Unifiquei blocos de conteúdo e padrões de navegação entre templates, diagnostiquei e corrigi falhas de rastreamento de conversão (Google Tag Manager/DataLayer) na rede de 5 sites, e melhorei Core Web Vitals (WebP/AVIF, lazy loading, CSS crítico, Cloudflare) e a performance do back-end (otimização de queries MySQL, cache com Redis).',
+      tags: ['Localização', 'Analytics', 'Core Web Vitals', 'Multi-site'],
       highlights: ['Rastreamento de conversões restaurado em uma rede de 5 sites'],
     },
   },
@@ -422,7 +422,7 @@ export const cases: Case[] = [
     solution:
       "Built a modern e-commerce site with a mobile-first design and streamlined checkout, integrated with RD Station so every purchase attempt is captured as a lead — including incomplete ones — turning them into future sales opportunities and expanding the client's digital sales channel.",
     stack: ['WordPress', 'PHP', 'JavaScript', 'MariaDB', 'RD Station API', 'Docker'],
-    tags: ['E-commerce', 'CRM integration', 'Lead capture'],
+    tags: ['E-commerce', 'CRM integration', 'Lead capture', 'Core Web Vitals'],
     highlights: [
       "Alares' first e-commerce store, built from the ground up",
       'RD Station integration captures failed/incomplete purchases as leads',
@@ -452,7 +452,7 @@ export const cases: Case[] = [
     title: 'Alares Internet Portal',
     clientOrProject: 'Alares Internet',
     period: 'Jun 2024 – Dec 2024',
-    role: 'Frontend Developer',
+    role: 'Senior WordPress Developer',
     coverImage: caseAlaresCover,
     summary:
       'New portal replacing a legacy system, with a modern design and better experience across all devices.',
@@ -468,7 +468,7 @@ export const cases: Case[] = [
     pt: {
       title: 'Portal Alares Internet',
       period: 'Jun 2024 – Dez 2024',
-      role: 'Desenvolvedor Frontend',
+      role: 'Desenvolvedor WordPress Sênior',
       summary:
         'Novo portal substituindo um sistema legado, com design moderno e melhor experiência em todos os dispositivos.',
       problem:
@@ -484,28 +484,28 @@ export const cases: Case[] = [
     title: 'Tinta de Qualidade Portal',
     clientOrProject: 'Tinta de Qualidade',
     period: '2025',
-    role: 'Frontend Developer',
+    role: 'Senior WordPress Developer',
     coverImage: caseTintaDeQualidadeCover,
     summary:
       'Institutional portal about paint quality and best practices, with clearer navigation for different audiences.',
     problem: 'Users struggled to find practical guidance and relevant sections quickly on the legacy site.',
     solution:
-      'Introduced a clearer content architecture with featured sections and responsive UI patterns, and led the kickoff of a full rebuild replacing the heavy Cornerstone page builder with custom blocks — defining the new WordPress technical foundation.',
-    stack: ['WordPress', 'Bootstrap', 'Cornerstone', 'Apache'],
+      'Rebuilt the site on custom Gutenberg blocks (React + PHP), replacing the heavy Cornerstone page builder, with a clearer content architecture and featured sections; then tuned Core Web Vitals (WebP/AVIF, lazy loading, critical CSS, JS/CSS deferral) and database performance.',
+    stack: ['WordPress', 'Gutenberg', 'React', 'PHP', 'Cloudflare'],
     tags: ['Portal', 'Content', 'Rebuild'],
-    highlights: ['Led rebuild kickoff, replacing Cornerstone with custom blocks'],
+    highlights: ['Cornerstone page builder replaced by custom Gutenberg blocks (React + PHP)'],
     metrics: [],
     links: [{ label: 'Live site', url: 'https://tintadequalidade.com.br/' }],
     pt: {
       title: 'Portal Tinta de Qualidade',
-      role: 'Desenvolvedor Frontend',
+      role: 'Desenvolvedor WordPress Sênior',
       summary:
         'Portal institucional sobre qualidade de tintas e boas práticas, com navegação mais clara para públicos diferentes.',
       problem: 'No site legado, os usuários tinham dificuldade para achar orientações práticas e seções relevantes.',
       solution:
-        'Introduzi uma arquitetura de conteúdo mais clara, com seções em destaque e padrões de UI responsivos, e liderei o início da reconstrução que troca o page builder Cornerstone por blocos sob medida, definindo a nova base técnica em WordPress.',
+        'Reconstruí o site com blocos Gutenberg sob medida (React + PHP), trocando o page builder Cornerstone, com uma arquitetura de conteúdo mais clara e seções em destaque; depois ajustei Core Web Vitals (WebP/AVIF, lazy loading, CSS crítico, adiamento de JS/CSS) e a performance do banco.',
       tags: ['Portal', 'Conteúdo', 'Reconstrução'],
-      highlights: ['Liderei o início da reconstrução, trocando o Cornerstone por blocos sob medida'],
+      highlights: ['Page builder Cornerstone substituído por blocos Gutenberg sob medida (React + PHP)'],
     },
   },
   {
@@ -514,26 +514,26 @@ export const cases: Case[] = [
     title: 'Abrafati Institutional Website',
     clientOrProject: 'Abrafati',
     period: '2025',
-    role: 'Frontend Developer',
+    role: 'Senior WordPress Developer',
     coverImage: caseAbrafatiCover,
     summary: 'Institutional website with structured content, events visibility and better mobile navigation.',
     problem: 'Event and association content was difficult to discover and buried across inconsistent pages.',
     solution:
-      'Reorganized navigation, standardized templates, and led the kickoff of a full rebuild replacing the heavy Cornerstone page builder with custom blocks — defining the new WordPress technical foundation.',
-    stack: ['WordPress', 'Bootstrap', 'Cornerstone', 'Apache'],
+      'Reorganized navigation and rebuilt the site on custom Gutenberg blocks (React + PHP), replacing the heavy Cornerstone page builder, plus Core Web Vitals and MySQL performance work.',
+    stack: ['WordPress', 'Gutenberg', 'React', 'PHP', 'Cloudflare'],
     tags: ['Institutional', 'Events', 'Rebuild'],
-    highlights: ['Led rebuild kickoff, replacing Cornerstone with custom blocks'],
+    highlights: ['Cornerstone page builder replaced by custom Gutenberg blocks (React + PHP)'],
     metrics: [],
     links: [{ label: 'Live site', url: 'https://abrafati.com.br/' }],
     pt: {
       title: 'Site institucional Abrafati',
-      role: 'Desenvolvedor Frontend',
+      role: 'Desenvolvedor WordPress Sênior',
       summary: 'Site institucional com conteúdo estruturado, eventos em evidência e melhor navegação no mobile.',
       problem: 'Eventos e conteúdo da associação eram difíceis de encontrar, espalhados por páginas inconsistentes.',
       solution:
-        'Reorganizei a navegação, padronizei templates e liderei o início da reconstrução que troca o page builder Cornerstone por blocos sob medida, definindo a nova base técnica em WordPress.',
+        'Reorganizei a navegação e reconstruí o site com blocos Gutenberg sob medida (React + PHP), trocando o page builder Cornerstone, além de trabalho de Core Web Vitals e performance de MySQL.',
       tags: ['Institucional', 'Eventos', 'Reconstrução'],
-      highlights: ['Liderei o início da reconstrução, trocando o Cornerstone por blocos sob medida'],
+      highlights: ['Page builder Cornerstone substituído por blocos Gutenberg sob medida (React + PHP)'],
     },
   },
   {
@@ -542,7 +542,7 @@ export const cases: Case[] = [
     title: 'Cuidados Sem Limites Campaign',
     clientOrProject: 'Cuidados Sem Limites',
     period: '2025',
-    role: 'Frontend Developer',
+    role: 'Senior WordPress Developer',
     coverImage: caseCuidadosSemLimitesCover,
     summary: 'Awareness campaign site with accessible typography and mobile-first sections.',
     problem: 'Messaging lacked a cohesive structure and did not guide visitors through the story effectively.',
@@ -554,7 +554,7 @@ export const cases: Case[] = [
     links: [{ label: 'Live site', url: 'https://cuidadosemlimites.com.br/' }],
     pt: {
       title: 'Campanha Cuidados Sem Limites',
-      role: 'Desenvolvedor Frontend',
+      role: 'Desenvolvedor WordPress Sênior',
       summary: 'Site de campanha de conscientização com tipografia acessível e seções mobile-first.',
       problem: 'A mensagem não tinha uma estrutura coesa e não conduzia o visitante pela história.',
       solution: 'Montei um layout guiado pela narrativa, otimizado para leitura, com CTAs alinhados às ações principais.',
@@ -567,7 +567,7 @@ export const cases: Case[] = [
     title: 'Agência F2F Website',
     clientOrProject: 'Agência F2F',
     period: '2025',
-    role: 'Frontend Developer',
+    role: 'Senior WordPress Developer',
     coverImage: caseAgenciaF2fCover,
     summary: 'Agency website showcasing services and work highlights, with a conversion-focused contact flow.',
     problem: 'The agency needed a redesign that made its services and results easier to scan.',
@@ -579,7 +579,7 @@ export const cases: Case[] = [
     links: [{ label: 'Live site', url: 'https://agenciaf2f.com/' }],
     pt: {
       title: 'Site da Agência F2F',
-      role: 'Desenvolvedor Frontend',
+      role: 'Desenvolvedor WordPress Sênior',
       summary: 'Site da agência com serviços e trabalhos em destaque, e um fluxo de contato focado em conversão.',
       problem: 'A agência precisava de um redesign que deixasse serviços e resultados mais fáceis de ler.',
       solution: 'Reconstruí a estrutura das páginas com seções de serviço focadas, CTAs mais claros e tipografia mais limpa.',
@@ -592,23 +592,91 @@ export const cases: Case[] = [
     title: 'Chego Lá Consórcio Website',
     clientOrProject: 'Chego Lá Consórcio',
     period: '2025',
-    role: 'Frontend Developer',
+    role: 'Senior WordPress Developer',
     coverImage: caseChegolaConsorcioCover,
     summary: 'Institutional website refresh with a clear services overview, strong CTAs and a mobile-friendly layout.',
     problem: 'The site needed a redesign, new features and bug fixes to improve experience and mobile responsiveness.',
-    solution: 'Reorganized content blocks, improved visual hierarchy and made the core sections fully responsive.',
-    stack: ['WordPress', 'jQuery', 'Google Analytics', 'Cloudflare'],
-    tags: ['Institutional', 'Redesign'],
-    highlights: [],
+    solution: 'Built the site on native Gutenberg blocks with no page builder, with a clear services overview and strong CTAs, and maintained its Salesforce lead integration.',
+    stack: ['WordPress', 'Gutenberg', 'Salesforce', 'Cloudflare'],
+    tags: ['Institutional', 'Gutenberg', 'CRM integration'],
+    highlights: ['Native Gutenberg blocks, no page builder', 'Salesforce lead integration'],
     metrics: [],
     links: [{ label: 'Live site', url: 'https://chegolaconsorcio.com.br/' }],
     pt: {
       title: 'Site Chego Lá Consórcio',
-      role: 'Desenvolvedor Frontend',
+      role: 'Desenvolvedor WordPress Sênior',
       summary: 'Renovação do site institucional com visão clara dos serviços, CTAs fortes e layout amigável no mobile.',
       problem: 'O site precisava de redesign, novos recursos e correções para melhorar a experiência e a responsividade.',
-      solution: 'Reorganizei os blocos de conteúdo, melhorei a hierarquia visual e deixei as seções principais totalmente responsivas.',
-      tags: ['Institucional', 'Redesign'],
+      solution: 'Construí o site com blocos Gutenberg nativos, sem page builder, com visão clara dos serviços e CTAs fortes, e mantive a integração de leads com o Salesforce.',
+      tags: ['Institucional', 'Gutenberg', 'Integração CRM'],
+      highlights: ['Blocos Gutenberg nativos, sem page builder', 'Integração de leads com Salesforce'],
+    },
+  },
+  {
+    id: 'minerva-pec',
+    kind: 'client',
+    title: 'MinervaFoods Carcass Efficiency Program',
+    clientOrProject: 'MinervaFoods (via DEXA)',
+    period: '2022 – 2023',
+    role: 'WordPress Developer',
+    summary:
+      'Data-management module for MinervaFoods’ Carcass Efficiency Program (PEC), replacing manual Excel tracking with a custom WordPress plugin.',
+    problem:
+      'Program results were tracked by hand in Excel spreadsheets, which made logging slow, error-prone and hard to filter or audit.',
+    solution:
+      'As the sole developer on the module, built a custom WordPress plugin integrated with an external API that automates result logging and filtering. On the same account, worked on the rebuild of MinervaFoods’ corporate portal, replacing the Divi page builder with a custom theme built on 20+ custom ACF Pro blocks.',
+    stack: ['WordPress', 'PHP', 'MySQL', 'ACF Pro', 'REST API', 'Jenkins', 'GitHub Actions'],
+    tags: ['Custom plugin', 'API integration', 'Agribusiness'],
+    highlights: [
+      'Manual Excel tracking replaced by automated logging and filtering',
+      'Corporate portal moved off Divi onto 20+ custom blocks',
+    ],
+    metrics: [],
+    pt: {
+      title: 'Programa de Eficiência de Carcaça MinervaFoods',
+      role: 'Desenvolvedor WordPress',
+      summary:
+        'Módulo de gestão de dados do Programa de Eficiência de Carcaça (PEC) da MinervaFoods, trocando o controle manual em Excel por um plugin WordPress sob medida.',
+      problem:
+        'Os resultados do programa eram registrados à mão em planilhas Excel, o que deixava o lançamento lento, sujeito a erro e difícil de filtrar ou auditar.',
+      solution:
+        'Como único desenvolvedor do módulo, criei um plugin WordPress integrado a uma API externa que automatiza o registro e a filtragem dos resultados. Na mesma conta, participei da reconstrução do portal corporativo da MinervaFoods, trocando o page builder Divi por um tema próprio com mais de 20 blocos ACF Pro.',
+      tags: ['Plugin sob medida', 'Integração de API', 'Agronegócio'],
+      highlights: [
+        'Controle manual em Excel substituído por registro e filtragem automáticos',
+        'Portal corporativo migrado do Divi para mais de 20 blocos sob medida',
+      ],
+    },
+  },
+  {
+    id: 'trajano-silva',
+    kind: 'client',
+    title: 'Trajano Silva Auction Platform Migration',
+    clientOrProject: 'Trajano Silva (via Rage)',
+    period: '2011 – 2015',
+    role: 'Sole Developer',
+    summary:
+      'Complete migration of a high-volume financial auction system from ASP + SQL Server to CodeIgniter + MySQL, with zero data loss and no downtime.',
+    problem:
+      'A business-critical auction platform with high financial volume ran on a legacy ASP + SQL Server stack full of stored procedures, and it could not stop operating during a migration.',
+    solution:
+      'As the sole developer, rebuilt the auction area in CodeIgniter + MySQL with a WordPress content portal, and migrated the entire database (records, transaction history and users) without losing data or interrupting operations. Stayed responsible for the platform’s maintenance afterwards.',
+    stack: ['CodeIgniter', 'PHP', 'MySQL', 'WordPress', 'SQL Server', 'ASP'],
+    tags: ['Legacy migration', 'Finance', 'Data migration'],
+    highlights: ['Stored-procedure logic ported to a PHP application', 'Ongoing maintenance after go-live'],
+    metrics: ['Zero data loss', 'No business downtime'],
+    pt: {
+      title: 'Migração da plataforma de leilões Trajano Silva',
+      role: 'Único desenvolvedor',
+      summary:
+        'Migração completa de um sistema de leilões de alto volume financeiro de ASP + SQL Server para CodeIgniter + MySQL, sem perda de dados e sem parar a operação.',
+      problem:
+        'Uma plataforma de leilões crítica e de alto volume financeiro rodava em ASP + SQL Server legado, cheia de stored procedures, e não podia parar durante a migração.',
+      solution:
+        'Como único desenvolvedor, reconstruí a área de leilões em CodeIgniter + MySQL com um portal de conteúdo em WordPress, e migrei todo o banco (registros, histórico de transações e usuários) sem perder dados nem interromper a operação. Segui responsável pela manutenção da plataforma depois disso.',
+      tags: ['Migração de legado', 'Financeiro', 'Migração de dados'],
+      highlights: ['Lógica de stored procedures portada para uma aplicação PHP', 'Manutenção contínua após a virada'],
+      metrics: ['Zero perda de dados', 'Sem parada na operação'],
     },
   },
   {

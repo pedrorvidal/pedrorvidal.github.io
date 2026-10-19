@@ -23,9 +23,9 @@ const en = {
   hero: {
     badge: 'Insert coin to play',
     role: 'Senior WordPress & Full-Stack PHP Developer',
-    specialty: 'WordPress · Laravel · React · 20+ years',
+    specialty: 'Web performance · Technical SEO · Marketing integrations',
     intro:
-      'I build and rescue web platforms for companies around the world: enterprise multi-site WordPress, custom Gutenberg blocks, Laravel back-ends and APIs, with a focus on performance, SEO, security and maintenance at scale.',
+      '20 years building, migrating and maintaining enterprise, multi-site and multi-country platforms for brands like Merz Aesthetics, Medtronic and Torrent Pharma: modern WordPress (Bedrock, custom Gutenberg blocks), headless WordPress with React, and Laravel. Open to remote roles.',
     location: 'Porto Alegre, RS, Brazil',
     ctaCases: 'Select stage',
     ctaContact: 'Contact',
@@ -38,14 +38,14 @@ const en = {
   about: {
     kicker: 'Player profile',
     title: 'About me',
-    bio: 'Full-Stack Developer with 20+ years of experience in PHP, WordPress and Laravel, with strong hands-on work in requirements gathering and data modeling for complex integrations. I manage multiple simultaneous projects for international brands such as Merz Aesthetics, Torrent Pharma and Medtronic, with a consistent record of diagnosing and fixing performance and SEO issues, responding to security incidents, and standardizing maintenance at scale.',
+    bio: 'Senior WordPress Developer and Full-Stack PHP engineer. Most recently I was the technical lead across simultaneous client projects at Agência F2F and the sole technical reference for the Merz Pharma network in Latin America. What I do best: lead WordPress projects end to end on modern stacks; build marketing integrations with RD Station, Mailchimp, Salesforce and Google Tag Manager; fix Core Web Vitals and technical SEO from front-end assets down to MySQL queries; migrate legacy systems with zero data loss; and turn security incidents into repeatable maintenance processes. I write tested code (PHPUnit, Jest, Vitest, PHPStan) and have worked in Agile teams since 2015.',
     stats: [
       { label: 'Class', value: 'Full-Stack PHP' },
       { label: 'Level', value: '20+ years' },
       { label: 'Base', value: 'Porto Alegre, BR' },
-      { label: 'Languages', value: 'Portuguese · English' },
-      { label: 'Education', value: 'B.Sc. Computer Science (URI, 2005)' },
-      { label: 'Special move', value: 'Legacy rescue' },
+      { label: 'Languages', value: 'Portuguese (native) · English (fluent)' },
+      { label: 'Education', value: 'B.Sc. Informatics (URI, 2000–2005)' },
+      { label: 'Special move', value: 'Zero-loss legacy migration' },
     ],
   },
   cases: {
@@ -132,9 +132,9 @@ const pt: Strings = {
   hero: {
     badge: 'Insira uma ficha',
     role: 'Desenvolvedor Sênior WordPress & Full-Stack PHP',
-    specialty: 'WordPress · Laravel · React · 20+ anos',
+    specialty: 'Performance web · SEO técnico · Integrações de marketing',
     intro:
-      'Construo e resgato plataformas web para empresas do mundo todo: WordPress multi-site corporativo, blocos Gutenberg sob medida, back-ends e APIs em Laravel, com foco em performance, SEO, segurança e manutenção em escala.',
+      '20 anos construindo, migrando e mantendo plataformas corporativas, multi-site e multi-país para marcas como Merz Aesthetics, Medtronic e Torrent Pharma: WordPress moderno (Bedrock, blocos Gutenberg sob medida), WordPress headless com React e Laravel. Aberto a vagas remotas.',
     location: 'Porto Alegre, RS, Brasil',
     ctaCases: 'Escolher fase',
     ctaContact: 'Contato',
@@ -147,14 +147,14 @@ const pt: Strings = {
   about: {
     kicker: 'Perfil do jogador',
     title: 'Sobre mim',
-    bio: 'Desenvolvedor Full-Stack com mais de 20 anos de experiência em PHP, WordPress e Laravel, com atuação prática em levantamento de requisitos e modelagem de dados para integrações complexas. Gerencio vários projetos simultâneos para marcas internacionais como Merz Aesthetics, Torrent Pharma e Medtronic, com histórico consistente de diagnóstico e correção de problemas de performance e SEO, resposta a incidentes de segurança e padronização de manutenção em escala.',
+    bio: 'Desenvolvedor WordPress Sênior e engenheiro Full-Stack PHP. Mais recentemente fui líder técnico em vários projetos simultâneos na Agência F2F e a referência técnica única da rede Merz Pharma na América Latina. O que faço melhor: liderar projetos WordPress de ponta a ponta em stacks modernas; construir integrações de marketing com RD Station, Mailchimp, Salesforce e Google Tag Manager; corrigir Core Web Vitals e SEO técnico, dos assets do front até as queries MySQL; migrar sistemas legados sem perda de dados; e transformar incidentes de segurança em processos de manutenção repetíveis. Escrevo código testado (PHPUnit, Jest, Vitest, PHPStan) e trabalho em times ágeis desde 2015.',
     stats: [
       { label: 'Classe', value: 'Full-Stack PHP' },
       { label: 'Nível', value: '20+ anos' },
       { label: 'Base', value: 'Porto Alegre, BR' },
-      { label: 'Idiomas', value: 'Português · Inglês' },
-      { label: 'Formação', value: 'Ciência da Computação (URI, 2005)' },
-      { label: 'Golpe especial', value: 'Resgate de legado' },
+      { label: 'Idiomas', value: 'Português (nativo) · Inglês (fluente)' },
+      { label: 'Formação', value: 'Bacharel em Informática (URI, 2000–2005)' },
+      { label: 'Golpe especial', value: 'Migração de legado sem perda' },
     ],
   },
   cases: {

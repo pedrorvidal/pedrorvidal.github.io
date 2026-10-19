@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Send, Linkedin, Github } from 'lucide-react';
+import { Send, Linkedin, Github, Mail } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
@@ -11,6 +11,7 @@ import { useReducedMotion } from '@/hooks/useReducedMotion';
 const socials = [
   { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/pedrorvidal/?locale=en' },
   { icon: Github, label: 'GitHub', href: 'https://github.com/pedrorvidal' },
+  { icon: Mail, label: 'Email', href: 'mailto:pedrorvidal@gmail.com' },
 ];
 
 const fieldClass = 'h-12 text-base bg-background border-2 focus-visible:ring-neon-cyan focus-visible:border-neon-cyan';

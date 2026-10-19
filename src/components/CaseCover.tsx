@@ -22,6 +22,11 @@ export default function CaseCover({ caseData, stage, className = '' }: CaseCover
     );
   }
 
+  const label =
+    caseData.kind === 'personal'
+      ? caseData.title.split(' — ')[0]
+      : caseData.clientOrProject.replace(/\s*\(.*\)$/, '');
+
   return (
     <div
       aria-hidden="true"
@@ -32,8 +37,10 @@ export default function CaseCover({ caseData, stage, className = '' }: CaseCover
         backgroundSize: '16px 16px',
       }}
     >
-      <span className="font-arcade text-sm text-neon-cyan text-glow">{stage}</span>
-      <span className="font-arcade text-[0.625rem] text-neon-yellow">{caseData.secret ? '???' : '</>'}</span>
+      <span className="px-4 text-center font-arcade text-sm uppercase text-neon-cyan text-glow">
+        {caseData.secret ? '???' : label}
+      </span>
+      <span className="font-arcade text-[0.625rem] text-neon-yellow">{caseData.secret ? stage : '</>'}</span>
     </div>
   );
 }

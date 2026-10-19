@@ -6,11 +6,15 @@ import { useLanguage } from '@/i18n/useLanguage';
 import { useCheat } from '@/cheat/context';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 
-const resumeFile = `${import.meta.env.BASE_URL}Pedro-Vidal-Resume.pdf`;
+const resumeFiles = {
+  en: 'Pedro-Vidal-Resume.pdf',
+  pt: 'Pedro-Vidal-Curriculo.pdf',
+};
 const TAPS_TO_UNLOCK = 7;
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
+  const resumeFile = resumeFiles[lang];
   const { cheat, toggleCheat } = useCheat();
   const reduced = useReducedMotion();
   const cardRef = useRef<HTMLDivElement>(null);
@@ -82,8 +86,8 @@ export default function Hero() {
                 {t.hero.ctaContact}
               </a>
               <a
-                href={resumeFile}
-                download="Pedro-Vidal-Resume.pdf"
+                href={`${import.meta.env.BASE_URL}${resumeFile}`}
+                download={resumeFile}
                 className="pixel-btn border-2 border-border text-foreground bg-background"
               >
                 <Download size={14} aria-hidden="true" /> {t.hero.ctaCv}
