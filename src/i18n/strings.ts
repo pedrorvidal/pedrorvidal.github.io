@@ -34,6 +34,8 @@ const en = {
     avatarAltCheat: 'Pedro Vidal dressed as a desert wanderer (secret skin)',
     player: 'Player 1',
     ready: 'Ready',
+    codeHint: 'Press',
+    tapHint: 'Tap me 7× fast',
   },
   about: {
     kicker: 'Player profile',
@@ -99,11 +101,13 @@ const en = {
     rights: 'Pedro Vidal. All rights reserved.',
     built: 'Built with React, Vite & Tailwind CSS.',
     hint: 'Psst… old-school players know a code.',
+    tapHint: 'On a touch screen? Tap the avatar 7 times.',
   },
   cheat: {
     title: 'Cheat activated! +30 lives',
     body: 'Secret skin and a hidden stage unlocked. Enter the code again to switch it off.',
     off: 'Cheat mode off. Back to normal play.',
+    keysLabel: 'Up, up, down, down, left, right, left, right, B, A',
   },
 };
 
@@ -143,6 +147,8 @@ const pt: Strings = {
     avatarAltCheat: 'Pedro Vidal vestido de andarilho do deserto (skin secreta)',
     player: 'Jogador 1',
     ready: 'Pronto',
+    codeHint: 'Aperte',
+    tapHint: 'Toque 7× rápido',
   },
   about: {
     kicker: 'Perfil do jogador',
@@ -208,11 +214,13 @@ const pt: Strings = {
     rights: 'Pedro Vidal. Todos os direitos reservados.',
     built: 'Feito com React, Vite e Tailwind CSS.',
     hint: 'Psiu… jogadores das antigas conhecem um código.',
+    tapHint: 'Na tela de toque? Toque 7 vezes no avatar.',
   },
   cheat: {
     title: 'Cheat ativado! +30 vidas',
     body: 'Skin secreta e fase escondida desbloqueadas. Digite o código de novo para desligar.',
     off: 'Modo cheat desligado. De volta ao jogo normal.',
+    keysLabel: 'Cima, cima, baixo, baixo, esquerda, direita, esquerda, direita, B, A',
   },
 };
 

@@ -1,5 +1,6 @@
 import { useRef, useState, type PointerEvent } from 'react';
 import { ArrowDown, Download, MapPin } from 'lucide-react';
+import KonamiKeys from './KonamiKeys';
 import ImgAvatar from '@/assets/images/vidal-pixel-art.webp';
 import ImgAvatarCheat from '@/assets/images/vidal-lisan-al-gaib.webp';
 import { useLanguage } from '@/i18n/useLanguage';
@@ -142,6 +143,14 @@ export default function Hero() {
                   <span>{cheat ? 'LIVES ×30' : 'SCORE 99999'}</span>
                   <span className="text-neon-yellow motion-safe:animate-blink">{t.hero.ready}</span>
                 </div>
+                {!cheat && (
+                  <p className="mt-3 text-center font-arcade text-[0.625rem] uppercase text-neon-cyan/80 motion-safe:animate-pulse">
+                    <span className="inline-flex flex-wrap items-center justify-center gap-2 touch:hidden">
+                      {t.hero.codeHint} <KonamiKeys />
+                    </span>
+                    <span className="hidden touch:inline">{t.hero.tapHint}</span>
+                  </p>
+                )}
               </div>
             </div>
           </div>

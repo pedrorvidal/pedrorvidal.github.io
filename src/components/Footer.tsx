@@ -1,4 +1,5 @@
 import { useLanguage } from '@/i18n/useLanguage';
+import KonamiKeys from './KonamiKeys';
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -9,8 +10,10 @@ export default function Footer() {
         <p>
           © {new Date().getFullYear()} {t.footer.rights} {t.footer.built}
         </p>
-        <p className="font-arcade text-[0.625rem] text-neon-cyan/80" title="↑ ↑ ↓ ↓ ← → ← → B A">
-          {t.footer.hint}
+        <p className="font-arcade text-[0.625rem] text-neon-cyan/80">{t.footer.hint}</p>
+        <p className="font-arcade text-[0.625rem] text-neon-yellow/80">
+          <KonamiKeys className="touch:hidden" />
+          <span className="hidden touch:inline">{t.footer.tapHint}</span>
         </p>
       </div>
     </footer>

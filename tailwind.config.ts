@@ -19,6 +19,10 @@ export default {
       },
     },
     extend: {
+      screens: {
+        // Phones and tablets: no hover, finger-sized pointer.
+        touch: { raw: '(hover: none) and (pointer: coarse)' },
+      },
       fontFamily: {
         sans: ['"Chakra Petch"', 'system-ui', 'sans-serif'],
         arcade: ['"Press Start 2P"', 'ui-monospace', 'monospace'],
