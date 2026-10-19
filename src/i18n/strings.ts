@@ -25,7 +25,7 @@ const en = {
     role: 'Senior WordPress & Full-Stack PHP Developer',
     specialty: 'Web performance · Technical SEO · Marketing integrations',
     intro:
-      '20 years building, migrating and maintaining enterprise, multi-site and multi-country platforms for brands like Merz Aesthetics, Medtronic and Torrent Pharma: modern WordPress (Bedrock, custom Gutenberg blocks), headless WordPress with React, and Laravel. Open to remote roles.',
+      '20 years turning slow, fragile and legacy web platforms into fast, secure systems that scale across sites and countries. I lead WordPress projects end to end, on modern stacks with custom blocks, headless React and Laravel, and own the hard parts: performance, technical SEO, integrations and zero-loss migrations. Open to remote roles.',
     location: 'Porto Alegre, RS, Brazil',
     ctaCases: 'Select stage',
     ctaContact: 'Contact',
@@ -138,7 +138,7 @@ const pt: Strings = {
     role: 'Desenvolvedor Sênior WordPress & Full-Stack PHP',
     specialty: 'Performance web · SEO técnico · Integrações de marketing',
     intro:
-      '20 anos construindo, migrando e mantendo plataformas corporativas, multi-site e multi-país para marcas como Merz Aesthetics, Medtronic e Torrent Pharma: WordPress moderno (Bedrock, blocos Gutenberg sob medida), WordPress headless com React e Laravel. Aberto a vagas remotas.',
+      '20 anos transformando plataformas web lentas, frágeis e legadas em sistemas rápidos, seguros e que escalam entre sites e países. Lidero projetos WordPress de ponta a ponta, em stacks modernas com blocos sob medida, React headless e Laravel, e cuido das partes difíceis: performance, SEO técnico, integrações e migrações sem perda de dados. Aberto a vagas remotas.',
     location: 'Porto Alegre, RS, Brasil',
     ctaCases: 'Escolher fase',
     ctaContact: 'Contato',
