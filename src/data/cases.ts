@@ -64,35 +64,35 @@ export const cases: Case[] = [
     role: 'Senior WordPress Developer',
     coverImage: caseGlpCover,
     summary:
-      "Led the migration and performance/SEO turnaround of GLP's ~900-page, investor-facing corporate site.",
+      "Proposed and sold the migration of GLP's ~900-page, investor-facing corporate site to WordPress, and worked with the team on its performance turnaround.",
     problem:
-      'The previous site ran on an old, discontinued PHP framework, with ~390 broken links, heavy render-blocking assets hurting mobile performance, and ~900 orphan pages — all damaging SEO for an investor-facing audience.',
+      'The previous site ran on an old, undocumented PHP framework (Slim Framework, 2012), with ~390 broken links and heavy render-blocking assets hurting mobile performance for an investor-facing audience.',
     solution:
-      'Led the migration to WordPress with a consistent component system, found the root cause of the broken links, optimized render-blocking assets, and cleaned up orphan pages — documenting an audit playbook for reuse on future projects.',
-    stack: ['WordPress', 'jQuery', 'Bootstrap', 'Google Analytics', 'Cloudflare'],
-    tags: ['Migration', 'Performance', 'SEO', 'Corporate'],
-    highlights: ['Documented audit playbook reused on later projects'],
+      'Proposed and sold a 160 to 200-hour upsell for the migration and defined the WP-CLI content import approach, carried out by the team. With the team, cut mobile render-blocking and handled the broken links with redirects.',
+    stack: ['WordPress', 'WP-CLI', 'jQuery', 'Bootstrap', 'Google Analytics', 'Cloudflare'],
+    tags: ['Migration', 'Performance', 'Corporate'],
+    highlights: ['160 to 200-hour migration upsell proposed and sold', 'WP-CLI import approach for ~900 pages'],
     metrics: [
-      '70–75% cut in mobile render-blocking time',
-      '~390 broken links diagnosed and fixed',
-      '~900 orphan pages removed',
+      '70 to 75% cut in mobile render-blocking (PageSpeed Insights)',
+      '~390 broken links handled with redirects',
+      '~900 pages migrated',
     ],
     links: [{ label: 'Live site', url: 'https://glp.com.br/' }],
     pt: {
       title: 'Site GLP Brasil',
       role: 'Desenvolvedor WordPress Sênior',
       summary:
-        'Liderei a migração e a virada de performance e SEO do site corporativo da GLP, com ~900 páginas voltadas a investidores.',
+        'Propus e vendi a migração para WordPress do site corporativo da GLP, com ~900 páginas voltadas a investidores, e trabalhei com o time na melhora de performance.',
       problem:
-        'O site anterior rodava em um framework PHP antigo e descontinuado, com ~390 links quebrados, assets bloqueando a renderização no mobile e ~900 páginas órfãs, tudo prejudicando o SEO para um público de investidores.',
+        'O site anterior rodava em um framework PHP antigo e sem documentação (Slim Framework, 2012), com ~390 links quebrados e assets bloqueando a renderização no mobile, para um público de investidores.',
       solution:
-        'Liderei a migração para WordPress com um sistema de componentes consistente, encontrei a causa raiz dos links quebrados, otimizei os assets que bloqueavam a renderização e limpei as páginas órfãs, documentando um playbook de auditoria reutilizável em projetos futuros.',
-      tags: ['Migração', 'Performance', 'SEO', 'Corporativo'],
-      highlights: ['Playbook de auditoria documentado e reutilizado em projetos seguintes'],
+        'Propus e vendi um upsell de 160 a 200 horas para a migração e defini a abordagem de importação de conteúdo via WP-CLI, executada pelo time. Com o time, reduzimos o bloqueio de renderização no mobile e tratamos os links quebrados com redirects.',
+      tags: ['Migração', 'Performance', 'Corporativo'],
+      highlights: ['Upsell de migração de 160 a 200 horas proposto e vendido', 'Abordagem de importação via WP-CLI para ~900 páginas'],
       metrics: [
-        '70–75% menos tempo de bloqueio de renderização no mobile',
-        '~390 links quebrados diagnosticados e corrigidos',
-        '~900 páginas órfãs removidas',
+        '70 a 75% menos bloqueio de renderização no mobile (PageSpeed Insights)',
+        '~390 links quebrados tratados com redirects',
+        '~900 páginas migradas',
       ],
     },
   },
@@ -103,37 +103,37 @@ export const cases: Case[] = [
     title: 'Ultherapy & Merz LATAM Network',
     clientOrProject: 'Ultherapy',
     period: '2025',
-    role: 'Technical Lead',
+    role: 'Senior WordPress Developer · Technical reference',
     coverImage: caseUltherapyCover,
     summary:
-      'Marketing site refresh and incident response across a 5-site network, with a standardized AI-assisted routine to keep WordPress secure and up to date.',
+      'Marketing site refresh and malware remediation across a 5-site network, with a standardized AI-assisted routine to keep WordPress secure and up to date.',
     problem:
-      'New features and treatments were not effectively highlighted, and a possible malware incident hit the entire 5-site Ultherapy network with no standardized update process in place.',
+      'New features and treatments were not effectively highlighted, and a malware incident hit the entire 5-site Ultherapy network with no standardized update process in place.',
     solution:
-      'Delivered new features, bug fixes, and layout/mobile improvements; led incident response and remediation, then standardized an AI-assisted routine (Claude Code) for updating WordPress core and dependencies via Composer across 10 repositories (2 pharmaceutical brands × 5 Latin American markets).',
-    stack: ['WordPress', 'Bedrock', 'Composer', 'Timber', 'Twig', 'Claude Code', 'Apache'],
+      "Delivered new features, bug fixes, and layout/mobile improvements; carried out the malware remediation following the security plan from Merz's global team (cleaning compromised files and tightening write permissions), then built an AI-assisted routine (Claude Code) for updating WordPress core and dependencies via Composer and WP-CLI across 10 repositories (2 pharmaceutical brands × 5 Latin American markets), with a CLAUDE.md per repository, Playwright validation and one PR per site.",
+    stack: ['WordPress', 'Bedrock', 'Composer', 'WP-CLI', 'Timber', 'Twig', 'Claude Code', 'Playwright', 'Apache'],
     tags: ['Security', 'Automation', 'Multi-site', 'LATAM'],
     highlights: [
-      'Led remediation of a possible-malware incident across a 5-site network',
-      'Standardized AI-assisted WordPress/Composer update routine across 10 repositories',
+      'Malware remediation across a 5-site network, following the global security plan; the incident did not happen again',
+      'AI-assisted WordPress/Composer update routine across 10 repositories',
     ],
-    metrics: ['Update cycle cut from 1 week to 1 day', '10 repositories, 5 markets'],
+    metrics: ['Effort per update cycle: 20 to 24h down to 8h', '10 repositories, 5 markets'],
     links: [{ label: 'Live site', url: 'https://ultherapy.com/' }],
     pt: {
       title: 'Rede Ultherapy & Merz LATAM',
-      role: 'Líder Técnico',
+      role: 'Desenvolvedor WordPress Sênior · Referência técnica',
       summary:
-        'Atualização do site de marketing e resposta a incidente em uma rede de 5 sites, com uma rotina padronizada e assistida por IA para manter o WordPress seguro e atualizado.',
+        'Atualização do site de marketing e remediação de malware em uma rede de 5 sites, com uma rotina padronizada e assistida por IA para manter o WordPress seguro e atualizado.',
       problem:
-        'Novos recursos e tratamentos não tinham destaque, e um possível incidente de malware atingiu toda a rede de 5 sites da Ultherapy, sem nenhum processo padronizado de atualização.',
+        'Novos recursos e tratamentos não tinham destaque, e um incidente de malware atingiu toda a rede de 5 sites da Ultherapy, sem nenhum processo padronizado de atualização.',
       solution:
-        'Entreguei novos recursos, correções e melhorias de layout e mobile; liderei a resposta e a remediação do incidente e padronizei uma rotina assistida por IA (Claude Code) para atualizar o core do WordPress e as dependências via Composer em 10 repositórios (2 marcas farmacêuticas × 5 mercados da América Latina).',
+        'Entreguei novos recursos, correções e melhorias de layout e mobile; executei a remediação do malware seguindo o plano de segurança do time global da Merz (limpeza dos arquivos comprometidos e ajuste de permissões de escrita), e depois montei uma rotina assistida por IA (Claude Code) para atualizar o core do WordPress e as dependências via Composer e WP-CLI em 10 repositórios (2 marcas farmacêuticas × 5 mercados da América Latina), com CLAUDE.md por repositório, validação com Playwright e um PR por site.',
       tags: ['Segurança', 'Automação', 'Multi-site', 'LATAM'],
       highlights: [
-        'Liderei a remediação de um possível malware em uma rede de 5 sites',
-        'Padronizei a rotina de atualização WordPress/Composer assistida por IA em 10 repositórios',
+        'Remediação de malware em uma rede de 5 sites, seguindo o plano de segurança global; o incidente não se repetiu',
+        'Rotina de atualização WordPress/Composer assistida por IA em 10 repositórios',
       ],
-      metrics: ['Ciclo de atualização de 1 semana para 1 dia', '10 repositórios, 5 mercados'],
+      metrics: ['Esforço por ciclo de atualização: de 20 a 24h para 8h', '10 repositórios, 5 mercados'],
     },
   },
   {
@@ -151,7 +151,7 @@ export const cases: Case[] = [
       'The portal was built on the Divi page builder: heavy markup and assets, layouts that drifted from the brand on every edit, and content spread across English, Spanish and Portuguese that was hard for the team to maintain consistently.',
     solution:
       'As part of the DEXA team, rebuilt the whole site on a custom WordPress theme, replacing Divi with a library of 20+ custom blocks built with ACF Pro. Editors compose pages from purpose-built, on-brand components (hero sliders, news, products, sustainability and investor content) instead of free-form builder layouts, in all three languages.',
-    stack: ['WordPress', 'PHP', 'ACF Pro', 'MySQL', 'Jenkins', 'GitHub Actions'],
+    stack: ['WordPress', 'PHP', 'ACF Pro', 'MySQL', 'Divi (replaced)'],
     tags: ['Rebuild', 'Custom theme', 'Custom blocks', 'Corporate', 'Agribusiness'],
     highlights: [
       'Divi page builder replaced by a custom theme',
@@ -180,17 +180,17 @@ export const cases: Case[] = [
     id: 'pv-blocks-suite',
     kind: 'personal',
     featured: true,
-    title: 'PV Blocks Suite — Native Gutenberg Blocks',
+    title: 'PV Blocks Suite: Native Gutenberg Blocks',
     clientOrProject: 'Open source',
     period: 'Sep 2026',
     role: 'WordPress Plugin Developer',
     coverImage: casePvBlocksSuiteCover,
     summary:
-      'A WordPress plugin bundling 12 production-ready, fully native Gutenberg blocks — server-rendered, accessible, translatable and covered by PHP and JS tests.',
+      'A WordPress plugin bundling 12 fully native Gutenberg blocks: server-rendered, accessible and translatable. Built with AI-assisted development (Claude Code), including AI-generated PHP and JS test suites.',
     problem:
-      'Client sites often rely on heavy page builders or a patchwork of third-party block plugins to get common sections like CTAs, accordions, tabs or pricing tables — adding bloat, inconsistent markup, accessibility gaps and dependency risk.',
+      'Client sites often rely on heavy page builders or a patchwork of third-party block plugins to get common sections like CTAs, accordions, tabs or pricing tables, adding bloat, inconsistent markup, accessibility gaps and dependency risk.',
     solution:
-      'Built a single lightweight plugin on WordPress’ native block-editor APIs only: every block is a dynamic block rendered in strictly-typed PHP 8.2, with a React + TypeScript editor UI and auto-registration from block.json. Blocks include Container, CTA, Accordion, Tabs, Pricing Table, Card Grid, Alert Box, Timeline, Before/After, Testimonials, Stats Counter and Team — using semantic HTML, WAI-ARIA patterns, reduced-motion support and the Interactivity API for front-end behavior that degrades gracefully without JavaScript. Shipped as v1.0.0 with a pt_BR translation and a pre-built release zip.',
+      'Built with Claude Code as a single lightweight plugin on WordPress’ native block-editor APIs only: every block is a dynamic block rendered in strictly-typed PHP 8.2, with a React + TypeScript editor UI and auto-registration from block.json. Blocks include Container, CTA, Accordion, Tabs, Pricing Table, Card Grid, Alert Box, Timeline, Before/After, Testimonials, Stats Counter and Team, using semantic HTML, WAI-ARIA patterns, reduced-motion support and the Interactivity API for front-end behavior that degrades gracefully without JavaScript. Shipped as v1.0.0 with a pt_BR translation and a pre-built release zip.',
     stack: [
       'WordPress',
       'Gutenberg',
@@ -210,10 +210,10 @@ export const cases: Case[] = [
       'Server-side rendering in strictly-typed PHP 8.2 with block.json auto-discovery',
       'Accessible by design: native <details>, ARIA tabs and slider, semantic markup, contrast warnings',
       'Interactive blocks built on the WordPress Interactivity API with no-JS fallbacks',
-      'Quality gate: PHPStan, WPCS, PHPUnit (wp-env), Jest + Testing Library and TypeScript checks',
+      'AI-generated quality gate: PHPStan, WPCS, PHPUnit (wp-env), Jest + Testing Library and TypeScript checks',
     ],
     metrics: [
-      '~300 automated tests (PHPUnit + Jest)',
+      '~300 AI-generated automated tests (PHPUnit + Jest)',
       'Every block has render and editor tests',
       'English + pt_BR out of the box',
     ],
@@ -222,25 +222,25 @@ export const cases: Case[] = [
       { label: 'Release v1.0.0', url: 'https://github.com/pedrorvidal/pv-blocks-suite/releases/latest' },
     ],
     pt: {
-      title: 'PV Blocks Suite — Blocos Gutenberg nativos',
+      title: 'PV Blocks Suite: Blocos Gutenberg nativos',
       period: 'Set 2026',
       role: 'Desenvolvedor de Plugins WordPress',
       summary:
-        'Plugin WordPress com 12 blocos Gutenberg 100% nativos e prontos para produção: renderizados no servidor, acessíveis, traduzíveis e cobertos por testes em PHP e JS.',
+        'Plugin WordPress com 12 blocos Gutenberg 100% nativos: renderizados no servidor, acessíveis e traduzíveis. Feito com desenvolvimento assistido por IA (Claude Code), incluindo suítes de testes em PHP e JS geradas por IA.',
       problem:
         'Sites de clientes costumam depender de page builders pesados ou de uma colcha de plugins de blocos de terceiros para seções comuns como CTAs, accordions, abas ou tabelas de preço, o que traz peso, markup inconsistente, falhas de acessibilidade e risco de dependência.',
       solution:
-        'Criei um único plugin leve usando apenas as APIs nativas do editor de blocos: cada bloco é dinâmico, renderizado em PHP 8.2 com tipagem estrita, com UI de editor em React + TypeScript e registro automático via block.json. Os blocos incluem Container, CTA, Accordion, Tabs, Pricing Table, Card Grid, Alert Box, Timeline, Before/After, Testimonials, Stats Counter e Team, com HTML semântico, padrões WAI-ARIA, suporte a reduced-motion e a Interactivity API para comportamento no front que degrada bem sem JavaScript. Lançado como v1.0.0 com tradução pt_BR e zip de release pronto.',
+        'Criei com o Claude Code um único plugin leve usando apenas as APIs nativas do editor de blocos: cada bloco é dinâmico, renderizado em PHP 8.2 com tipagem estrita, com UI de editor em React + TypeScript e registro automático via block.json. Os blocos incluem Container, CTA, Accordion, Tabs, Pricing Table, Card Grid, Alert Box, Timeline, Before/After, Testimonials, Stats Counter e Team, com HTML semântico, padrões WAI-ARIA, suporte a reduced-motion e a Interactivity API para comportamento no front que degrada bem sem JavaScript. Lançado como v1.0.0 com tradução pt_BR e zip de release pronto.',
       tags: ['Plugin WordPress', 'Gutenberg', 'Acessibilidade', 'i18n'],
       highlights: [
         '12 blocos nativos (20 com os blocos filhos), sem depender de page builder',
         'Renderização no servidor em PHP 8.2 tipado, com auto-descoberta via block.json',
         'Acessível desde o início: <details> nativo, abas e slider com ARIA, markup semântico, alertas de contraste',
         'Blocos interativos com a Interactivity API do WordPress e fallback sem JS',
-        'Gate de qualidade: PHPStan, WPCS, PHPUnit (wp-env), Jest + Testing Library e checagem de TypeScript',
+        'Gate de qualidade gerado com IA: PHPStan, WPCS, PHPUnit (wp-env), Jest + Testing Library e checagem de TypeScript',
       ],
       metrics: [
-        '~300 testes automatizados (PHPUnit + Jest)',
+        '~300 testes automatizados gerados com IA (PHPUnit + Jest)',
         'Todo bloco tem testes de render e de editor',
         'Inglês + pt_BR de fábrica',
       ],
@@ -249,17 +249,17 @@ export const cases: Case[] = [
   {
     id: 'bp-tracker',
     kind: 'personal',
-    title: 'BP Tracker — Headless WordPress + React',
+    title: 'BP Tracker: Headless WordPress + React',
     clientOrProject: 'Open source',
     period: 'Sep 2026',
     role: 'Full-Stack Developer',
     coverImage: caseBpTrackerCover,
     summary:
-      'Blood pressure tracking app with a headless WordPress backend (custom REST API + JWT auth) and a mobile-first React + TypeScript frontend with trend charts.',
+      'Blood pressure tracking app with a headless WordPress backend (custom REST API + JWT auth) and a mobile-first React + TypeScript frontend with trend charts. Built with AI-assisted development (Claude Code), from a spec I wrote and reviewed phase by phase.',
     problem:
-      'Logging blood pressure twice a day is only useful if the history is easy to read — and health data demands real authentication, strict per-user data isolation, and protection against abuse, none of which WordPress offers out of the box for a decoupled SPA.',
+      'Logging blood pressure twice a day is only useful if the history is easy to read, and health data demands real authentication, strict per-user data isolation, and protection against abuse, none of which WordPress offers out of the box for a decoupled SPA.',
     solution:
-      'Built a WordPress plugin that exposes a versioned REST API (bp-tracker/v1) over a custom post type with its own capabilities, secured by HS256 JWT access tokens kept in memory and rotating refresh tokens in an HttpOnly, SameSite=Strict cookie — with reuse detection that revokes the whole session, per-IP and per-account rate limiting, an exact-origin CORS policy, and an admin approval flow for new sign-ups. On top of it, a Vite + React 19 + TypeScript SPA (TanStack Query, Tailwind CSS v4, Recharts) with a fast, validated entry form and a history dashboard: period presets and custom ranges, averages compared against the previous period, ACC/AHA category distribution, a zoomable systolic/diastolic chart with auto-aggregation, and dark mode.',
+      'Built a WordPress plugin that exposes a versioned REST API (bp-tracker/v1) over a custom post type with its own capabilities, secured by HS256 JWT access tokens kept in memory and rotating refresh tokens in an HttpOnly, SameSite=Strict cookie, with reuse detection that revokes the whole session, per-IP and per-account rate limiting, an exact-origin CORS policy, and an admin approval flow for new sign-ups. On top of it, a Vite + React 19 + TypeScript SPA (TanStack Query, Tailwind CSS v4, Recharts) with a fast, validated entry form and a history dashboard: period presets and custom ranges, averages compared against the previous period, ACC/AHA category distribution, a zoomable systolic/diastolic chart with auto-aggregation, and dark mode.',
     stack: [
       'WordPress',
       'PHP 8.2',
@@ -284,17 +284,17 @@ export const cases: Case[] = [
       'CI with lint, PHPStan level 6, type-check, tests, dependency audit and Dependabot',
     ],
     metrics: [
-      '320+ automated tests (PHPUnit + Vitest)',
+      '320+ AI-generated automated tests (PHPUnit + Vitest)',
       'PHPStan level 6 · strict TypeScript',
       'Zero-warning ESLint gate in CI',
     ],
     links: [{ label: 'GitHub', url: 'https://github.com/pedrorvidal/bp-tracker' }],
     pt: {
-      title: 'BP Tracker — WordPress headless + React',
+      title: 'BP Tracker: WordPress headless + React',
       period: 'Set 2026',
       role: 'Desenvolvedor Full-Stack',
       summary:
-        'App de acompanhamento de pressão arterial com back-end WordPress headless (REST API própria + autenticação JWT) e front-end React + TypeScript mobile-first com gráficos de tendência.',
+        'App de acompanhamento de pressão arterial com back-end WordPress headless (REST API própria + autenticação JWT) e front-end React + TypeScript mobile-first com gráficos de tendência. Feito com desenvolvimento assistido por IA (Claude Code), a partir de uma spec escrita e revisada por mim, fase a fase.',
       problem:
         'Registrar a pressão duas vezes por dia só é útil se o histórico for fácil de ler, e dados de saúde exigem autenticação de verdade, isolamento estrito por usuário e proteção contra abuso, nada disso pronto no WordPress para uma SPA desacoplada.',
       solution:
@@ -308,7 +308,7 @@ export const cases: Case[] = [
         'CI com lint, PHPStan nível 6, type-check, testes, auditoria de dependências e Dependabot',
       ],
       metrics: [
-        '320+ testes automatizados (PHPUnit + Vitest)',
+        '320+ testes automatizados gerados com IA (PHPUnit + Vitest)',
         'PHPStan nível 6 · TypeScript estrito',
         'ESLint sem warnings como gate no CI',
       ],
@@ -327,7 +327,7 @@ export const cases: Case[] = [
     problem:
       'Information was dense and not prioritized for quick access by patients and caregivers, and each country landing page sent leads to RD Station with inconsistent, error-prone field mapping (e.g., "estado" in Brazil vs. "provincia" in Argentina).',
     solution:
-      'Redesigned content flow with prominent resources and improved mobile readability, and implemented 5 continuous integrations between the multi-country landing pages and RD Station — normalizing divergent fields into a single CRM record, including handling fields missing from specific forms.',
+      'Redesigned content flow with prominent resources and improved mobile readability, and implemented 5 continuous integrations between the multi-country landing pages and RD Station, normalizing divergent fields into a single CRM record, including handling fields missing from specific forms.',
     stack: ['WordPress', 'RD Station API', 'PHP', 'jQuery', 'Bootstrap', 'Nginx'],
     tags: ['Healthcare', 'CRM integration', 'Multi-country'],
     highlights: ['5-country RD Station integration with normalized CRM fields'],
@@ -359,8 +359,8 @@ export const cases: Case[] = [
     problem:
       'Content was fragmented across pages, and conversion-event failures were distorting campaign data the marketing team relied on for media decisions.',
     solution:
-      'Unified content blocks and navigation patterns across templates, diagnosed and fixed conversion-tracking failures (Google Tag Manager/DataLayer) across the 5-site network, and improved Core Web Vitals (WebP/AVIF, lazy loading, critical CSS, Cloudflare) and back-end performance (MySQL query tuning, Redis caching).',
-    stack: ['WordPress', 'Timber', 'Twig', 'Google Tag Manager', 'Cloudflare', 'Redis'],
+      'Unified content blocks and navigation patterns across templates, diagnosed and fixed conversion-tracking failures (Google Tag Manager/DataLayer) across the 5-site network, and improved Core Web Vitals (WebP/AVIF, lazy loading, Cloudflare).',
+    stack: ['WordPress', 'Timber', 'Twig', 'Google Tag Manager', 'Cloudflare'],
     tags: ['Localization', 'Analytics', 'Core Web Vitals', 'Multi-site'],
     highlights: ['Restored accurate conversion tracking across a 5-site network'],
     metrics: [],
@@ -372,7 +372,7 @@ export const cases: Case[] = [
       problem:
         'O conteúdo estava fragmentado entre páginas, e falhas nos eventos de conversão distorciam os dados de campanha que o marketing usava para decidir mídia.',
       solution:
-        'Unifiquei blocos de conteúdo e padrões de navegação entre templates, diagnostiquei e corrigi falhas de rastreamento de conversão (Google Tag Manager/DataLayer) na rede de 5 sites, e melhorei Core Web Vitals (WebP/AVIF, lazy loading, CSS crítico, Cloudflare) e a performance do back-end (otimização de queries MySQL, cache com Redis).',
+        'Unifiquei blocos de conteúdo e padrões de navegação entre templates, diagnostiquei e corrigi falhas de rastreamento de conversão (Google Tag Manager/DataLayer) na rede de 5 sites, e melhorei Core Web Vitals (WebP/AVIF, lazy loading, Cloudflare).',
       tags: ['Localização', 'Analytics', 'Core Web Vitals', 'Multi-site'],
       highlights: ['Rastreamento de conversões restaurado em uma rede de 5 sites'],
     },
@@ -458,9 +458,9 @@ export const cases: Case[] = [
     summary:
       "Built Alares' first e-commerce store, capturing every purchase attempt as a lead through an RD Station integration.",
     problem:
-      'The client depended solely on call-center sales, and purchase attempts that failed to complete — including sales lost to lack of signal coverage in the region — were discarded instead of being followed up on.',
+      'The client depended solely on call-center sales, and purchase attempts that failed to complete (including sales lost to lack of signal coverage in the region) were discarded instead of being followed up on.',
     solution:
-      "Built a modern e-commerce site with a mobile-first design and streamlined checkout, integrated with RD Station so every purchase attempt is captured as a lead — including incomplete ones — turning them into future sales opportunities and expanding the client's digital sales channel.",
+      "Built a modern e-commerce site with a mobile-first design and streamlined checkout, integrated with RD Station so every purchase attempt is captured as a lead, including incomplete ones, turning them into future sales opportunities and expanding the client's digital sales channel.",
     stack: ['WordPress', 'PHP', 'JavaScript', 'MariaDB', 'RD Station API', 'Docker'],
     tags: ['E-commerce', 'CRM integration', 'Lead capture', 'Core Web Vitals'],
     highlights: [
@@ -492,30 +492,30 @@ export const cases: Case[] = [
     title: 'Alares Internet Portal',
     clientOrProject: 'Alares Internet',
     period: 'Jun 2024 – Dec 2024',
-    role: 'Senior WordPress Developer',
+    role: 'Full-Stack Developer (maintenance)',
     coverImage: caseAlaresCover,
     summary:
-      'New portal replacing a legacy system, with a modern design and better experience across all devices.',
+      "Maintenance of Alares' Next.js portal, built by the client's own team and maintained by Agência F2F.",
     problem:
-      'The existing platform depended on a legacy system, resulting in publication issues and poor customer satisfaction.',
+      "The client's team built the portal; Agência F2F took over ongoing fixes and adjustments, and every merge request had to pass the client's lint and build pipeline.",
     solution:
-      'Built a modern website with a mobile-first design, new content management and personalized content recommendations, integrated with the existing CRM and inventory systems through an external API.',
-    stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Prisma'],
-    tags: ['Portal', 'Next.js', 'API integration'],
+      "Delivered fixes and adjustments to the React/Next.js codebase, reworking the code as needed to pass the client's GitLab CI lint and build checks.",
+    stack: ['Next.js', 'React', 'TypeScript', 'GitLab CI'],
+    tags: ['Portal', 'Maintenance', 'Next.js'],
     highlights: [],
     metrics: [],
     links: [{ label: 'Live site', url: 'https://alaresinternet.com.br' }],
     pt: {
       title: 'Portal Alares Internet',
       period: 'Jun 2024 – Dez 2024',
-      role: 'Desenvolvedor WordPress Sênior',
+      role: 'Desenvolvedor Full-Stack (manutenção)',
       summary:
-        'Novo portal substituindo um sistema legado, com design moderno e melhor experiência em todos os dispositivos.',
+        'Manutenção do portal Next.js da Alares, construído pelo time do próprio cliente e mantido pela Agência F2F.',
       problem:
-        'A plataforma dependia de um sistema legado, o que gerava problemas de publicação e baixa satisfação dos clientes.',
+        'O portal foi construído pelo time do cliente; a Agência F2F assumiu as correções e ajustes contínuos, e cada merge request precisava passar no pipeline de lint e build do cliente.',
       solution:
-        'Construí um site moderno e mobile-first, com nova gestão de conteúdo e recomendações personalizadas, integrado aos sistemas de CRM e estoque existentes por meio de uma API externa.',
-      tags: ['Portal', 'Next.js', 'Integração de API'],
+        'Entreguei correções e ajustes no código React/Next.js, retrabalhando o código quando necessário para passar nas checagens de lint e build do GitLab CI do cliente.',
+      tags: ['Portal', 'Manutenção', 'Next.js'],
     },
   },
   {
@@ -530,7 +530,7 @@ export const cases: Case[] = [
       'Institutional portal about paint quality and best practices, with clearer navigation for different audiences.',
     problem: 'Users struggled to find practical guidance and relevant sections quickly on the legacy site.',
     solution:
-      'Rebuilt the site on custom Gutenberg blocks (React + PHP), replacing the heavy Cornerstone page builder, with a clearer content architecture and featured sections; then tuned Core Web Vitals (WebP/AVIF, lazy loading, critical CSS, JS/CSS deferral) and database performance.',
+      'Rebuilt the site on custom Gutenberg blocks (React + PHP), replacing the heavy Cornerstone page builder, with a clearer content architecture and featured sections; then tuned Core Web Vitals (WebP/AVIF, lazy loading, JS/CSS deferral).',
     stack: ['WordPress', 'Gutenberg', 'React', 'PHP', 'Cloudflare'],
     tags: ['Portal', 'Content', 'Rebuild'],
     highlights: ['Cornerstone page builder replaced by custom Gutenberg blocks (React + PHP)'],
@@ -543,7 +543,7 @@ export const cases: Case[] = [
         'Portal institucional sobre qualidade de tintas e boas práticas, com navegação mais clara para públicos diferentes.',
       problem: 'No site legado, os usuários tinham dificuldade para achar orientações práticas e seções relevantes.',
       solution:
-        'Reconstruí o site com blocos Gutenberg sob medida (React + PHP), trocando o page builder Cornerstone, com uma arquitetura de conteúdo mais clara e seções em destaque; depois ajustei Core Web Vitals (WebP/AVIF, lazy loading, CSS crítico, adiamento de JS/CSS) e a performance do banco.',
+        'Reconstruí o site com blocos Gutenberg sob medida (React + PHP), trocando o page builder Cornerstone, com uma arquitetura de conteúdo mais clara e seções em destaque; depois ajustei Core Web Vitals (WebP/AVIF, lazy loading, adiamento de JS/CSS).',
       tags: ['Portal', 'Conteúdo', 'Reconstrução'],
       highlights: ['Page builder Cornerstone substituído por blocos Gutenberg sob medida (React + PHP)'],
     },
@@ -559,7 +559,7 @@ export const cases: Case[] = [
     summary: 'Institutional website with structured content, events visibility and better mobile navigation.',
     problem: 'Event and association content was difficult to discover and buried across inconsistent pages.',
     solution:
-      'Reorganized navigation and rebuilt the site on custom Gutenberg blocks (React + PHP), replacing the heavy Cornerstone page builder, plus Core Web Vitals and MySQL performance work.',
+      'Reorganized navigation and rebuilt the site on custom Gutenberg blocks (React + PHP), replacing the heavy Cornerstone page builder, plus Core Web Vitals work.',
     stack: ['WordPress', 'Gutenberg', 'React', 'PHP', 'Cloudflare'],
     tags: ['Institutional', 'Events', 'Rebuild'],
     highlights: ['Cornerstone page builder replaced by custom Gutenberg blocks (React + PHP)'],
@@ -571,7 +571,7 @@ export const cases: Case[] = [
       summary: 'Site institucional com conteúdo estruturado, eventos em evidência e melhor navegação no mobile.',
       problem: 'Eventos e conteúdo da associação eram difíceis de encontrar, espalhados por páginas inconsistentes.',
       solution:
-        'Reorganizei a navegação e reconstruí o site com blocos Gutenberg sob medida (React + PHP), trocando o page builder Cornerstone, além de trabalho de Core Web Vitals e performance de MySQL.',
+        'Reorganizei a navegação e reconstruí o site com blocos Gutenberg sob medida (React + PHP), trocando o page builder Cornerstone, além de trabalho de Core Web Vitals.',
       tags: ['Institucional', 'Eventos', 'Reconstrução'],
       highlights: ['Page builder Cornerstone substituído por blocos Gutenberg sob medida (React + PHP)'],
     },
@@ -665,7 +665,7 @@ export const cases: Case[] = [
       'Program results were tracked by hand in Excel spreadsheets, which made logging slow, error-prone and hard to filter or audit.',
     solution:
       'As the sole developer on the module, built a custom WordPress plugin integrated with an external API that automates result logging and filtering. Built on the same account as the corporate portal rebuild.',
-    stack: ['WordPress', 'PHP', 'MySQL', 'ACF Pro', 'REST API', 'Jenkins', 'GitHub Actions'],
+    stack: ['WordPress', 'PHP', 'MySQL', 'ACF Pro', 'REST API'],
     tags: ['Custom plugin', 'API integration', 'Agribusiness'],
     highlights: [
       'Manual Excel tracking replaced by automated logging and filtering',
@@ -694,27 +694,27 @@ export const cases: Case[] = [
     period: '2011 – 2015',
     role: 'Sole Developer',
     summary:
-      'Complete migration of a high-volume financial auction system from ASP + SQL Server to CodeIgniter + MySQL, with zero data loss and no downtime.',
+      'Complete migration of an auction system with 3 to 4 thousand active users from ASP + SQL Server to CodeIgniter + MySQL, with zero data loss and no downtime.',
     problem:
-      'A business-critical auction platform with high financial volume ran on a legacy ASP + SQL Server stack full of stored procedures, and it could not stop operating during a migration.',
+      'A business-critical auction platform with 3 to 4 thousand active users ran on a legacy ASP + SQL Server stack full of stored procedures, and it could not stop operating during a migration.',
     solution:
       'As the sole developer, rebuilt the auction area in CodeIgniter + MySQL with a WordPress content portal, and migrated the entire database (records, transaction history and users) without losing data or interrupting operations. Stayed responsible for the platform’s maintenance afterwards.',
     stack: ['CodeIgniter', 'PHP', 'MySQL', 'WordPress', 'SQL Server', 'ASP'],
     tags: ['Legacy migration', 'Finance', 'Data migration'],
     highlights: ['Stored-procedure logic ported to a PHP application', 'Ongoing maintenance after go-live'],
-    metrics: ['Zero data loss', 'No business downtime'],
+    metrics: ['3 to 4 thousand active users migrated', 'Zero data loss', 'No business downtime'],
     pt: {
       title: 'Migração da plataforma de leilões Trajano Silva',
       role: 'Único desenvolvedor',
       summary:
-        'Migração completa de um sistema de leilões de alto volume financeiro de ASP + SQL Server para CodeIgniter + MySQL, sem perda de dados e sem parar a operação.',
+        'Migração completa de um sistema de leilões com 3 a 4 mil usuários ativos de ASP + SQL Server para CodeIgniter + MySQL, sem perda de dados e sem parar a operação.',
       problem:
-        'Uma plataforma de leilões crítica e de alto volume financeiro rodava em ASP + SQL Server legado, cheia de stored procedures, e não podia parar durante a migração.',
+        'Uma plataforma de leilões crítica, com 3 a 4 mil usuários ativos, rodava em ASP + SQL Server legado, cheia de stored procedures, e não podia parar durante a migração.',
       solution:
         'Como único desenvolvedor, reconstruí a área de leilões em CodeIgniter + MySQL com um portal de conteúdo em WordPress, e migrei todo o banco (registros, histórico de transações e usuários) sem perder dados nem interromper a operação. Segui responsável pela manutenção da plataforma depois disso.',
       tags: ['Migração de legado', 'Financeiro', 'Migração de dados'],
       highlights: ['Lógica de stored procedures portada para uma aplicação PHP', 'Manutenção contínua após a virada'],
-      metrics: ['Zero perda de dados', 'Sem parada na operação'],
+      metrics: ['3 a 4 mil usuários ativos migrados', 'Zero perda de dados', 'Sem parada na operação'],
     },
   },
   {
@@ -725,7 +725,7 @@ export const cases: Case[] = [
     period: 'Aug 2026',
     role: 'WordPress Plugin Developer',
     summary:
-      'A native, dynamic Gutenberg image-slider block: no shortcodes, no slider library, server-rendered and tested.',
+      'A native, dynamic Gutenberg image-slider block: no shortcodes, no slider library, server-rendered, with AI-generated tests.',
     problem:
       'Image sliders are one of the most common reasons sites install heavy third-party plugins, with shortcodes and bundled libraries that slow pages down.',
     solution:
@@ -737,13 +737,13 @@ export const cases: Case[] = [
       'No external slider library; arrows are inline SVG',
       'Independent desktop/mobile heights in px, vh or em',
     ],
-    metrics: ['PHP render tests + JS editor tests', 'v1.0.0, GPL-2.0'],
+    metrics: ['AI-generated PHP render tests + JS editor tests', 'v1.0.0, GPL-2.0'],
     links: [{ label: 'GitHub', url: 'https://github.com/pedrorvidal/vidal-slider-block' }],
     pt: {
       period: 'Ago 2026',
       role: 'Desenvolvedor de Plugins WordPress',
       summary:
-        'Bloco Gutenberg nativo e dinâmico de slider de imagens: sem shortcode, sem biblioteca de slider, renderizado no servidor e testado.',
+        'Bloco Gutenberg nativo e dinâmico de slider de imagens: sem shortcode, sem biblioteca de slider, renderizado no servidor e com testes gerados por IA.',
       problem:
         'Sliders de imagem estão entre os motivos mais comuns para instalar plugins pesados de terceiros, com shortcodes e bibliotecas embutidas que deixam as páginas lentas.',
       solution:
@@ -754,7 +754,7 @@ export const cases: Case[] = [
         'Sem biblioteca externa de slider; setas em SVG inline',
         'Alturas independentes para desktop e mobile em px, vh ou em',
       ],
-      metrics: ['Testes de render em PHP + testes de editor em JS', 'v1.0.0, GPL-2.0'],
+      metrics: ['Testes de render em PHP + testes de editor em JS, gerados com IA', 'v1.0.0, GPL-2.0'],
     },
   },
   {
@@ -777,7 +777,7 @@ export const cases: Case[] = [
       'Validation on server and client',
       'Ships with a pt_BR translation',
     ],
-    metrics: ['Zero runtime dependencies', 'Unit tests in PHP and TS'],
+    metrics: ['Zero runtime dependencies', 'AI-generated unit tests in PHP and TS'],
     links: [{ label: 'GitHub', url: 'https://github.com/pedrorvidal/pv-simple-whatsapp-button' }],
     pt: {
       period: 'Set 2026',
@@ -794,7 +794,7 @@ export const cases: Case[] = [
         'Validação no servidor e no cliente',
         'Já vem com tradução pt_BR',
       ],
-      metrics: ['Zero dependências em runtime', 'Testes unitários em PHP e TS'],
+      metrics: ['Zero dependências em runtime', 'Testes unitários em PHP e TS, gerados com IA'],
     },
   },
   {

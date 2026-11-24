@@ -22,10 +22,10 @@ const en = {
   },
   hero: {
     badge: 'Insert coin to play',
-    role: 'Senior WordPress & Full-Stack PHP Developer',
-    specialty: 'Web performance · Technical SEO · Marketing integrations',
+    role: 'Senior WordPress & PHP Developer',
+    specialty: 'WordPress · PHP & Laravel · Web performance · API integrations',
     intro:
-      '20 years turning slow, fragile and legacy web platforms into fast, secure systems that scale across sites and countries. I lead WordPress projects end to end, on modern stacks with custom blocks, headless React and Laravel, and own the hard parts: performance, technical SEO, integrations and zero-loss migrations. Open to remote roles.',
+      '20 years building, migrating and maintaining production websites and applications for agencies, healthcare brands and clients in 5 Latin American countries. Custom WordPress plugins and themes, Laravel, API integrations, web performance (Core Web Vitals) and zero-loss legacy migrations, with AI-assisted development (Claude Code) and a documented process. Open to remote roles.',
     location: 'Porto Alegre, RS, Brazil',
     ctaCases: 'Select stage',
     ctaContact: 'Contact',
@@ -40,9 +40,9 @@ const en = {
   about: {
     kicker: 'Player profile',
     title: 'About me',
-    bio: 'Senior WordPress Developer and Full-Stack PHP engineer. Most recently I was the technical lead across simultaneous client projects at Agência F2F and the sole technical reference for the Merz Pharma network in Latin America. What I do best: lead WordPress projects end to end on modern stacks; build marketing integrations with RD Station, Mailchimp, Salesforce and Google Tag Manager; fix Core Web Vitals and technical SEO from front-end assets down to MySQL queries; migrate legacy systems with zero data loss; and turn security incidents into repeatable maintenance processes. I write tested code (PHPUnit, Jest, Vitest, PHPStan) and have worked in Agile teams since 2015.',
+    bio: 'Senior WordPress and PHP developer. At Agência F2F I was the technical reference across simultaneous client projects and the sole technical reference for the Merz network in Latin America, guiding a team of 4 developers. What I do best: custom WordPress plugins and themes (Bedrock, Timber, Gutenberg, ACF Pro); API integrations with RD Station, Salesforce, Mailchimp, Google Tag Manager and Google Places; web performance measured with PageSpeed Insights; legacy migrations with zero data loss; Laravel applications in production; and WordPress security in code (nonces, sanitization, capabilities). On SEO, I implement the technical guidelines defined by SEO teams. I use AI daily with Claude Code, including to generate automated test suites (PHPUnit, Jest) for my open-source plugins, and I have worked in Agile teams since 2015.',
     stats: [
-      { label: 'Class', value: 'Full-Stack PHP' },
+      { label: 'Class', value: 'WordPress & PHP' },
       { label: 'Level', value: '20+ years' },
       { label: 'Base', value: 'Porto Alegre, BR' },
       { label: 'Languages', value: 'Portuguese (native) · English (fluent)' },
@@ -135,10 +135,10 @@ const pt: Strings = {
   },
   hero: {
     badge: 'Insira uma ficha',
-    role: 'Desenvolvedor Sênior WordPress & Full-Stack PHP',
-    specialty: 'Performance web · SEO técnico · Integrações de marketing',
+    role: 'Desenvolvedor WordPress e PHP Sênior',
+    specialty: 'WordPress · PHP e Laravel · Performance web · Integração de APIs',
     intro:
-      '20 anos transformando plataformas web lentas, frágeis e legadas em sistemas rápidos, seguros e que escalam entre sites e países. Lidero projetos WordPress de ponta a ponta, em stacks modernas com blocos sob medida, React headless e Laravel, e cuido das partes difíceis: performance, SEO técnico, integrações e migrações sem perda de dados. Aberto a vagas remotas.',
+      '20 anos construindo, migrando e mantendo sites e aplicações em produção para agências, marcas de saúde e clientes em 5 países da América Latina. Plugins e temas WordPress customizados, Laravel, integração de APIs, performance web (Core Web Vitals) e migração de legado sem perda de dados, com desenvolvimento assistido por IA (Claude Code) e processo documentado. Aberto a vagas remotas.',
     location: 'Porto Alegre, RS, Brasil',
     ctaCases: 'Escolher fase',
     ctaContact: 'Contato',
@@ -153,9 +153,9 @@ const pt: Strings = {
   about: {
     kicker: 'Perfil do jogador',
     title: 'Sobre mim',
-    bio: 'Desenvolvedor WordPress Sênior e engenheiro Full-Stack PHP. Mais recentemente fui líder técnico em vários projetos simultâneos na Agência F2F e a referência técnica única da rede Merz Pharma na América Latina. O que faço melhor: liderar projetos WordPress de ponta a ponta em stacks modernas; construir integrações de marketing com RD Station, Mailchimp, Salesforce e Google Tag Manager; corrigir Core Web Vitals e SEO técnico, dos assets do front até as queries MySQL; migrar sistemas legados sem perda de dados; e transformar incidentes de segurança em processos de manutenção repetíveis. Escrevo código testado (PHPUnit, Jest, Vitest, PHPStan) e trabalho em times ágeis desde 2015.',
+    bio: 'Desenvolvedor WordPress e PHP sênior. Na Agência F2F fui referência técnica em vários projetos simultâneos e a referência técnica única da rede Merz na América Latina, orientando um time de 4 devs. O que faço melhor: plugins e temas WordPress customizados (Bedrock, Timber, Gutenberg, ACF Pro); integração de APIs com RD Station, Salesforce, Mailchimp, Google Tag Manager e Google Places; performance web medida no PageSpeed Insights; migração de sistemas legados sem perda de dados; aplicações Laravel em produção; e segurança WordPress no código (nonces, sanitização, capabilities). Em SEO, implemento as orientações técnicas definidas pelos times de SEO. Uso IA no dia a dia com o Claude Code, inclusive para gerar suítes de testes automatizados (PHPUnit, Jest) nos meus plugins open source, e trabalho em times ágeis desde 2015.',
     stats: [
-      { label: 'Classe', value: 'Full-Stack PHP' },
+      { label: 'Classe', value: 'WordPress e PHP' },
       { label: 'Nível', value: '20+ anos' },
       { label: 'Base', value: 'Porto Alegre, BR' },
       { label: 'Idiomas', value: 'Português (nativo) · Inglês (fluente)' },

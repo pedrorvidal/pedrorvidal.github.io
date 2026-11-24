@@ -8,37 +8,37 @@ const skillGroups = [
     icon: Code2,
     color: 'cyan',
     category: { en: 'Languages & Frameworks', pt: 'Linguagens & Frameworks' },
-    skills: ['PHP 8', 'WordPress', 'Multisite', 'WooCommerce', 'ACF Pro', 'Bedrock', 'WP-CLI', 'Laravel', 'CodeIgniter', 'Symfony'],
+    skills: ['PHP 8', 'WordPress', 'Multisite', 'WooCommerce', 'ACF Pro', 'Bedrock', 'Timber', 'Composer', 'WP-CLI', 'Laravel', 'CodeIgniter'],
   },
   {
     icon: LayoutTemplate,
     color: 'magenta',
     category: { en: 'Frontend', pt: 'Frontend' },
-    skills: ['Gutenberg', 'Interactivity API', 'React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Sass', 'Vite'],
+    skills: ['Gutenberg', 'React (Gutenberg blocks)', 'JavaScript', 'HTML5', 'CSS3', 'Sass', 'Bootstrap'],
   },
   {
     icon: Database,
     color: 'yellow',
     category: { en: 'Data & Performance', pt: 'Dados & Performance' },
-    skills: ['MySQL tuning', 'PostgreSQL', 'Redis', 'Core Web Vitals', 'Technical SEO', 'Cloudflare', 'REST APIs', 'JWT'],
+    skills: ['MySQL', 'Core Web Vitals', 'PageSpeed Insights', 'Cloudflare', 'REST APIs', 'WordPress security'],
   },
   {
     icon: GitBranch,
     color: 'green',
     category: { en: 'Testing & CI/CD', pt: 'Testes & CI/CD' },
-    skills: ['PHPUnit', 'Jest', 'Vitest', 'PHPStan', 'WPCS', 'Docker', 'GitHub Actions', 'Bitbucket Pipelines', 'Jenkins'],
+    skills: ['GitHub Actions', 'Docker', 'Git', 'AI-generated test suites (PHPUnit, Jest)'],
   },
   {
     icon: Bot,
     color: 'cyan',
     category: { en: 'AI & Ways of working', pt: 'IA & Forma de trabalho' },
-    skills: ['Claude Code', 'MCP', 'Playwright', 'AI-assisted workflows', 'Scrum', 'Kanban'],
+    skills: ['Claude Code', 'AI-assisted development', 'Playwright (via Claude Code)', 'Scrum', 'Kanban'],
   },
   {
     icon: Plug,
     color: 'magenta',
     category: { en: 'Integrations', pt: 'Integrações' },
-    skills: ['RD Station', 'Mailchimp', 'Salesforce', 'SFMC', 'Google Tag Manager', 'Google Places API'],
+    skills: ['RD Station', 'Mailchimp', 'Salesforce', 'Google Tag Manager', 'Google Places API'],
   },
 ] as const;
 
