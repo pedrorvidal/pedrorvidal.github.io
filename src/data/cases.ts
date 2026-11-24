@@ -687,6 +687,36 @@ export const cases: Case[] = [
     },
   },
   {
+    id: 'perch',
+    kind: 'client',
+    title: 'Perch International Website',
+    clientOrProject: 'Perch (via DEXA)',
+    period: '2022 – 2023',
+    role: 'Technical Lead, WordPress',
+    summary:
+      'International WordPress project where I was the technical lead and the direct contact with the client, in English.',
+    problem:
+      'The client needed its WordPress site, built on a premium theme with the WPBakery page builder, developed and adjusted with someone who could handle both the technical side and the conversation with them in English.',
+    solution:
+      'Led the technical side of the project and worked directly with the client in English: implemented the pages on the premium theme with WPBakery and guided the client on how to use the theme documentation to manage their own content.',
+    stack: ['WordPress', 'PHP', 'WPBakery', 'Premium theme'],
+    tags: ['International client', 'Technical lead', 'English'],
+    highlights: ['Direct client communication in English', 'Client guided on managing content with the theme documentation'],
+    metrics: [],
+    pt: {
+      title: 'Site internacional Perch',
+      role: 'Responsável técnico, WordPress',
+      summary:
+        'Projeto WordPress internacional em que fui o responsável técnico e o contato direto com o cliente, em inglês.',
+      problem:
+        'O cliente precisava desenvolver e ajustar o site WordPress, feito sobre um tema pago com o page builder WPBakery, com alguém que cuidasse da parte técnica e da conversa com ele em inglês.',
+      solution:
+        'Conduzi a parte técnica do projeto e falei direto com o cliente, em inglês: implementei as páginas no tema pago com WPBakery e orientei o cliente a usar a documentação do tema para gerenciar o próprio conteúdo.',
+      tags: ['Cliente internacional', 'Responsável técnico', 'Inglês'],
+      highlights: ['Comunicação direta com o cliente em inglês', 'Cliente orientado a gerenciar o conteúdo pela documentação do tema'],
+    },
+  },
+  {
     id: 'trajano-silva',
     kind: 'client',
     title: 'Trajano Silva Auction Platform Migration',
